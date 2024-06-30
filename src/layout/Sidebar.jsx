@@ -3,7 +3,8 @@ import { cn } from '@/lib/utils';
 import { NavLink } from 'react-router-dom';
 import { HiDocumentAdd, HiClipboardList } from "react-icons/hi";
 import { FaHome,FaStore  } from "react-icons/fa";
-import companyLogo from '../assets/logo/logo.png'
+import companyLogo from '../assets/logo/logo.png';
+import { MdQuestionMark } from "react-icons/md";
 
 const Sidebar = () => {
    
@@ -71,6 +72,15 @@ const Sidebar = () => {
                     <span className="truncate">Settings</span>
                 </NavLink>
             </nav>
+{/* Footer section-------------- */}
+            <div className="bg-[#EBEEFF] max-w-lg p-8 shadow-md rounded-lg mt-5 relative">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#4338CA] rounded-full">
+                <span className="text-4xl text-white"><MdQuestionMark /></span>
+            </div>
+                <h1 className="text-xs font-semibold mb-4">Need Help with Easydrop</h1>
+                <button className='rounded-sm bg-[#4338CA] text-white p-2 text-sm'>Go to Help Center</button>
+          
+        </div>
                
         </aside>
     );
