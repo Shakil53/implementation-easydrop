@@ -49,28 +49,35 @@ const Balance = () => {
                     </div>
                 </div>
             </div>
-            <div className=" p-4">
-                <h1 className="text-xl sm:hidden font-semibold">Balance</h1>
-                <div className="grid grid-row">
+            <div className="p-4">
+                <h1 className="text-xl sm:hidden font-semibold mb-4">Balance</h1>
+                
                         {/* ---------Balance */}
-                    <div className="grid grid-cols-12 gap-4">
-                        <div className="grid grid-flow-col sm:grid-flow-row col-span-4 gap-2">
-                            <div className="bg-red-500 rounded-lg p-2">
+                    <div className="grid sm:grid-cols-12 grid-cols-1 gap-4">
+                        <div className="grid sm:grid-flow-row col-span-4 gap-4 sm:gap-2">
+                            <div className="bg-red-500 rounded-lg p-2 shadow-md">
                                     <h1 className="text-white">Demo</h1>
                             </div>
-                            <div className="bg-purple-500 rounded-lg p-2">
+                            <div className="bg-purple-500 rounded-lg p-2 shadow-md">
                                     <h1 className="text-white">Demo</h1>
                             </div>
                         </div>
-                        <div className="bg-teal-500 rounded-lg p-2 col-span-4">
+                        <div className="bg-teal-500 rounded-lg p-2 col-span-4 shadow-md">
                                 <h1 className="text-white">Demo</h1>
                         </div>
-                        <div className="bg-yellow-500 rounded-lg p-2 col-span-4">
+                        <div className="bg-yellow-500 rounded-lg p-2 col-span-4 shadow-md">
                                 <h1 className="text-white">Demo</h1>
                         </div>
                         
+                </div>
+                {/* Payment Request table----------------- */}
+                <div>
+                <h1 className="text-2xl font-semibold mb-4 sm:text-center mt-4">Payment Request</h1>
+                    <div className="bg-orange-600 p-2 rounded-lg shadow-md">
+                        <p className="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, minus!</p>
                     </div>
-               </div>
+                </div>
+               
             </div>
         </>
     );
