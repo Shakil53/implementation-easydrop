@@ -7,8 +7,10 @@ import { ArrowUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { TbCoinTaka } from "react-icons/tb";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Bar, BarChart, CartesianGrid, Legend, Line, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { data } from "@/api/balanceDataApi";
+import BalanceTable from "@/utils/BalanceTable";
+
 
 
 
@@ -58,13 +60,13 @@ const Balance = () => {
                 </div>
             </div>
             <div className="p-4">
-                <h1 className="text-xl sm:hidden font-semibold mb-4">Balance</h1>
+                <h1 className="text-2xl sm:hidden font-semibold mb-4">Balance</h1>
                 
                         {/* ---------Balance */}
                     <div className="grid sm:grid-cols-12 grid-cols-1 gap-4">
                     <div className="grid sm:grid-flow-row col-span-4 gap-4 sm:gap-2">
                         {/* Card section 1--------------------- */}
-                            <div className="rounded-lg border p-2 shadow-md">
+                            <div className="rounded-lg border p-4 shadow-md">
                                     <div className="flex justify-between items-center">
                                         <h1 className="text-xl font-semibold">Current Balance</h1>
                                         <Button className="bg-[#6366F1] rounded-2xl px-3 py-2 text-white">Request Payment</Button>
@@ -81,7 +83,7 @@ const Balance = () => {
                             
                         </div>
                         {/* Card section 2--------------------- */}
-                            <div className="border rounded-lg p-2 shadow-md">
+                            <div className="border rounded-lg p-4 shadow-md">
                                         <div className="flex justify-between items-center">
                                                     <h1 className="text-xl font-semibold">Request Payment</h1>
                                                     <TbCoinTaka className="size-8 text-[#6366F1]"></TbCoinTaka>
@@ -98,7 +100,7 @@ const Balance = () => {
                             </div>
                         </div>
                         {/* Card section 3--------------------- */}
-                        <div className="border rounded-lg p-2 col-span-4 shadow-md">
+                        <div className="border rounded-lg p-3 col-span-4 shadow-md">
                                     <div className="flex justify-between items-center">
                                             <h1 className="text-xl font-semibold">Commission Earned</h1>
                                      </div>
@@ -139,7 +141,7 @@ const Balance = () => {
                                     </ResponsiveContainer>
                     </div>
                     {/* Card Section 4 ----------Graph chart 2*/}
-                    <div className="border rounded-lg p-2 col-span-4 shadow-md">
+                    <div className="border rounded-lg p-3 col-span-4 shadow-md">
                         
                                 <ResponsiveContainer width="100%" height="100%">
                                         <BarChart width={150} height={40} data={data}>
@@ -154,13 +156,13 @@ const Balance = () => {
                                    
                         </div>
                         
-                </div>
                 {/* Payment Request table----------------- */}
-                <div>
-                <h1 className="text-xl font-semibold mb-4 sm:text-center mt-4">Payment Request</h1>
-                    <div className="bg-orange-600 p-2 rounded-lg shadow-md">
-                        <p className="text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus, minus!</p>
-                    </div>
+            </div>
+                <div className="border p-2 rounded-lg shadow-md">
+                <h1 className="text-2xl font-semibold mb-4 sm:text-center mt-4">Payment Request</h1>
+
+                    <BalanceTable></BalanceTable>
+                   
                 </div>
                
             </div>
