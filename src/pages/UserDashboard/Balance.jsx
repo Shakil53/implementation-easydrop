@@ -10,6 +10,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { data } from "@/api/balanceDataApi";
 import BalanceTable from "@/utils/BalanceTable";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
 
 
 
@@ -41,21 +42,39 @@ const Balance = () => {
                     </div>
                     
                     <div className="hidden sm:block">
-                        <Popover>
-                            <PopoverTrigger >
-                                <IoIosArrowDown></IoIosArrowDown>
-                            </PopoverTrigger>
-                                <PopoverContent className="w-80 mt-8 items-center shadow-lg p-5 rounded">
-                                <div className="space-y-2">
-                                    <div className="space-y-2">
-                                        <h4 className="font-medium leading-none">Dimensions</h4>
-                                        <p className="text-sm text-muted-foreground">
-                                        Set the dimensions for the layer.
-                                        </p>
-                                    </div>
-                                </div>
-                                </PopoverContent>
-                        </Popover>
+                            <Menubar>
+                                <MenubarMenu>
+                                    <MenubarTrigger><IoIosArrowDown></IoIosArrowDown></MenubarTrigger>
+                                    <MenubarContent className='mt-5'>
+                                    <MenubarItem>
+                                        Settings <MenubarShortcut>⌘T</MenubarShortcut>
+                                    </MenubarItem>
+                                    <MenubarSeparator />
+                                    <MenubarItem>Print</MenubarItem>
+                                    <MenubarSeparator />
+                                    <MenubarItem>Share</MenubarItem>
+                                    <MenubarSeparator />
+                                    <MenubarItem>Logout</MenubarItem>
+                                    </MenubarContent>
+                                </MenubarMenu>
+                            </Menubar>
+                       
+                        {/* <Menubar>
+                            <MenubarMenu>
+                                <MenubarTrigger> <IoIosArrowDown></IoIosArrowDown></MenubarTrigger>
+                                <MenubarContent>
+                                <MenubarItem>
+                                    New Tab <MenubarShortcut>⌘T</MenubarShortcut>
+                                </MenubarItem>
+                                <MenubarItem>New Window</MenubarItem>
+                                <MenubarSeparator />
+                                <MenubarItem>Share</MenubarItem>
+                                <MenubarSeparator />
+                                <MenubarItem>Print</MenubarItem>
+                                </MenubarContent>
+                            </MenubarMenu>
+                        </Menubar> */}
+
                     </div>
                 </div>
             </div>

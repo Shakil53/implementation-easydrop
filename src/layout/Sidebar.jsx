@@ -108,15 +108,16 @@ const Sidebar = () => {
                     </nav>
                     {/* Footer section-------------- */}
                     <div className="hidden md:block bg-[#EBEEFF] max-w-lg p-8 shadow-md rounded-lg mt-5 relative">
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#4338CA] rounded-full">
-                        <span className="text-4xl text-white"><MdQuestionMark /></span>
-                    </div>
-                        <h1 className="text-xs font-bold mb-4">Need Help with Easydrop</h1>
-                        <Link to='/'>
-                            <button className='rounded-sm bg-[#4338CA] text-white p-2 text-sm font-semibold'>Go to Help Center</button>
-                        </Link>
-                
+                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#4338CA] rounded-full">
+                            <span className="text-4xl text-white"><MdQuestionMark /></span>
                         </div>
+                            <h1 className="text-xs font-bold mb-4">Need Help with Easydrop</h1>
+                            
+                                <Link to='/'>
+                                    <button className='rounded-sm bg-[#4338CA] text-white p-2 text-sm font-semibold'>Go to Help Center</button>
+                                </Link>
+                        
+                    </div>
             </div>
                
     </aside>
