@@ -7,10 +7,14 @@ import { ArrowUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { TbCoinTaka } from "react-icons/tb";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Bar, BarChart, CartesianGrid, Legend, Line, Rectangle, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { data } from "@/api/balanceDataApi";
+
 
 
 
 const Balance = () => {
+
     return (
         <>
              <div className="flex justify-center sm:justify-end">
@@ -58,7 +62,8 @@ const Balance = () => {
                 
                         {/* ---------Balance */}
                     <div className="grid sm:grid-cols-12 grid-cols-1 gap-4">
-                        <div className="grid sm:grid-flow-row col-span-4 gap-4 sm:gap-2">
+                    <div className="grid sm:grid-flow-row col-span-4 gap-4 sm:gap-2">
+                        {/* Card section 1--------------------- */}
                             <div className="rounded-lg border p-2 shadow-md">
                                     <div className="flex justify-between items-center">
                                         <h1 className="text-xl font-semibold">Current Balance</h1>
@@ -74,13 +79,14 @@ const Balance = () => {
                                         </div>
                                     </div>
                             
-                            </div>
-                            <div className="b order rounded-lg p-2 shadow-md">
+                        </div>
+                        {/* Card section 2--------------------- */}
+                            <div className="border rounded-lg p-2 shadow-md">
                                         <div className="flex justify-between items-center">
-                                                    <h1 className="text-xl font-semibold">Current Balance</h1>
+                                                    <h1 className="text-xl font-semibold">Request Payment</h1>
                                                     <TbCoinTaka className="size-8 text-[#6366F1]"></TbCoinTaka>
                                                 </div>
-                                                <h1 className="text-4xl font-bold">TK. 200</h1>
+                                                <h1 className="text-4xl font-bold">TK. 500</h1>
                                                 <div className="flex items-center gap-2">          
                                                     <div className="bg-[#00E676] bg-opacity-20 size-5 rounded-full flex items-center justify-center">
                                                     <ArrowUp className=" text-[#00E676] size-4"></ArrowUp> 
@@ -91,6 +97,7 @@ const Balance = () => {
                                                 </div>
                             </div>
                         </div>
+                        {/* Card section 3--------------------- */}
                         <div className="border rounded-lg p-2 col-span-4 shadow-md">
                                     <div className="flex justify-between items-center">
                                             <h1 className="text-xl font-semibold">Commission Earned</h1>
@@ -98,15 +105,15 @@ const Balance = () => {
                                     <div className="flex justify-between">
                                         <h1 className="text-4xl font-bold">TK. 300</h1>
                                         <Select>
-                                            <SelectTrigger className="w-[180px]">
-                                                <SelectValue placeholder="Last 7  payment" />
+                                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                                <SelectValue placeholder="Last 7 payment" />
                                             </SelectTrigger>
                                             <SelectContent>
                                                 <SelectGroup>
                                                 <SelectLabel>Months</SelectLabel>
                                                 <SelectItem value="apple">Jan - April</SelectItem>
-                                                <SelectItem value="pineapple">May - Aug</SelectItem>
-                                                <SelectItem value="pineapple">Sep - Dec</SelectItem>
+                                                <SelectItem value="pineapple">May- Aug</SelectItem>
+                                                <SelectItem value="mango">Sep - Dec</SelectItem>
                                                 </SelectGroup>
                                             </SelectContent>
                                         </Select>
@@ -119,9 +126,32 @@ const Balance = () => {
                                             <p><span className="text-[#00E676] text-sm">+50%</span> <span className="text-[#949494]">From last week</span></p>
                                         </div>
                                     </div>
-                        </div>
-                        <div className="bg-yellow-500 rounded-lg p-2 col-span-4 shadow-md">
-                                <h1 className="text-white">Demo</h1>
+                            {/* Graph chart ---------------------- */}
+                            <ResponsiveContainer width="100%" height="70%">
+                                        <BarChart width={150} height={40} data={data}>
+                                            <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
+                                            <YAxis dataKey='uv'/>
+                                            <Tooltip dataKey='pv' />
+                                            <Legend />
+                                            <CartesianGrid strokeDasharray="3 3" />
+                                            <Bar dataKey="uv"  barSize={20} fill="#6366F1" background={{ fill: '#eee' }} />
+                                        </BarChart>
+                                    </ResponsiveContainer>
+                    </div>
+                    {/* Card Section 4 ----------Graph chart 2*/}
+                    <div className="border rounded-lg p-2 col-span-4 shadow-md">
+                        
+                                <ResponsiveContainer width="100%" height="100%">
+                                        <BarChart width={150} height={40} data={data}>
+                                            <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
+                                            <YAxis dataKey='uv'/>
+                                            <Tooltip dataKey='pv' />
+                                            <Legend />
+                                            <CartesianGrid strokeDasharray="3 3" />
+                                            <Bar dataKey="uv"  barSize={20} fill="#F163DA" background={{ fill: '#eee' }} />
+                                        </BarChart>
+                                    </ResponsiveContainer>
+                                   
                         </div>
                         
                 </div>
