@@ -1,8 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { IoNotifications } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import {Popover} from "@/components/ui/popover"
-import { PopoverContent, PopoverTrigger } from "@radix-ui/react-popover";
 import { ArrowUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { TbCoinTaka } from "react-icons/tb";
@@ -23,7 +21,7 @@ const Balance = () => {
              <div className="flex justify-center sm:justify-end">
                 {/* --------Header Avater */}
                 <div className="flex items-center gap-2 justify-end p-4 lg:p-5">
-                <div className="flex items-center gap-5 sm:flex-row-reverse">
+                    <div className="flex items-center gap-28 md:gap-5 sm:flex-row-reverse">
                             <div className="flex gap-3">
                                 <div className="flex sm:flex-row-reverse gap-3 items-center">
                                     <Avatar>
@@ -58,30 +56,13 @@ const Balance = () => {
                                     </MenubarContent>
                                 </MenubarMenu>
                             </Menubar>
-                       
-                        {/* <Menubar>
-                            <MenubarMenu>
-                                <MenubarTrigger> <IoIosArrowDown></IoIosArrowDown></MenubarTrigger>
-                                <MenubarContent>
-                                <MenubarItem>
-                                    New Tab <MenubarShortcut>⌘T</MenubarShortcut>
-                                </MenubarItem>
-                                <MenubarItem>New Window</MenubarItem>
-                                <MenubarSeparator />
-                                <MenubarItem>Share</MenubarItem>
-                                <MenubarSeparator />
-                                <MenubarItem>Print</MenubarItem>
-                                </MenubarContent>
-                            </MenubarMenu>
-                        </Menubar> */}
-
                     </div>
                 </div>
             </div>
             <div className="p-4">
                 <h1 className="text-2xl sm:hidden font-semibold mb-4">Balance</h1>
                 
-                        {/* ---------Balance */}
+                        {/* ---------Balance content */}
                     <div className="grid sm:grid-cols-12 grid-cols-1 gap-4">
                     <div className="grid sm:grid-flow-row col-span-4 gap-4 sm:gap-2">
                         {/* Card section 1--------------------- */}
@@ -177,7 +158,7 @@ const Balance = () => {
                         
                 {/* Payment Request table----------------- */}
             </div>
-                <div className="border p-2 rounded-lg shadow-md">
+                <div className="border mt-4 p-2 rounded-lg shadow-md">
                 <h1 className="text-2xl font-semibold mb-4 sm:text-center mt-4">Payment Request</h1>
 
                     <BalanceTable></BalanceTable>

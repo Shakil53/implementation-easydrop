@@ -9,7 +9,9 @@ const UserDashboard = () => {
         
 
             <div className='grid grid-cols-12 h-screen'>
-                <Sidebar></Sidebar>
+            
+                    <Sidebar></Sidebar>
+               
                 <div className="col-span-10 w-full">
 
                 <Outlet></Outlet>
