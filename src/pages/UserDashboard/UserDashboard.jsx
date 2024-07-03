@@ -13,8 +13,7 @@ const UserDashboard = () => {
                     <Sidebar></Sidebar>
                
                 <div className="col-span-10 w-full">
-
-                <Outlet></Outlet>
+                    <Outlet></Outlet>
                 </div>
           
             </div>

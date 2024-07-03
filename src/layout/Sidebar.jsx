@@ -39,12 +39,12 @@ const Sidebar = () => {
                 {/* Hamburger Menu Button for Mobile View */}
                     <div className="lg:hidden flex justify-center mb-4">
                         <button onClick={toggleSidebar} className="text-gray-600 focus:outline-none">
-                        {isOpen ? <HiX className="text-2xl" /> : <HiMenu className="text-2xl" />}
+                        {isOpen ? <HiX className="text-2xl"/> : <HiMenu className="text-2xl" />}
                         </button>
                     </div>
                 <div className={`lg:block ${isOpen ? 'block' : 'hidden'}`}>
                                 {/* company logo ------------ */}
-                            <div className='mb-16 hidden md:block'>
+                            <div className='mb-10 hidden md:block'>
                                 <Link to='/'><img src={companyLogo} alt='company logo'></img></Link>
                             </div>
                             <nav className="flex flex-col gap-2">
@@ -52,20 +52,20 @@ const Sidebar = () => {
                                     <NavLink
                                         key={to}
                                         to={to}
-                                        className={({ isActive }) => cn("p-1 md:p-3 bg-white rounded-sm border shadow-sm font-semibold text-black transition-all flex items-center gap-2", {
+                                        className={({ isActive }) => cn(" md:p-3 bg-white rounded-sm border shadow-sm font-semibold text-black transition-all flex  gap-2", {
                                             ' bg-[#4338CA] text-white': isActive,
                                         })}
                                     
                                     >
-                                        <div className='mx-auto md:mx-0 md:truncate md:flex gap-2 items-center '>
-                                            <Icon className="shrink-0 " />
+                                        <div className='mx-auto md:mx-0 md:truncate md:flex gap-2'>
+                                            <Icon className="shrink-0 size-6" />
                                             <span className="truncate hidden md:block">{label}</span>
                                         </div>
                                     </NavLink>
                                 ))}
                 </nav>
                     {/* Footer section-------------- */}
-                    <div className="hidden md:block bg-[#EBEEFF] max-w-lg p-8 shadow-md rounded-lg mt-6 relative">
+                    <div className="hidden md:block bg-[#EBEEFF] max-w-lg p-8 shadow-md rounded-lg mt-12 relative">
                         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#4338CA] rounded-full">
                             <span className="text-4xl text-white"><MdQuestionMark /></span>
                         </div>

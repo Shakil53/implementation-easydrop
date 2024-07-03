@@ -15,6 +15,8 @@ import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, Me
 
 
 const Balance = () => {
+   
+    
 
     return (
         <>
@@ -25,8 +27,8 @@ const Balance = () => {
                             <div className="flex gap-3">
                                 <div className="flex sm:flex-row-reverse gap-3 items-center">
                                     <Avatar>
-                                        <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-                                        <AvatarFallback>CN</AvatarFallback>
+                                    <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                                    <AvatarFallback>CN</AvatarFallback>
                                     </Avatar>
                                     <div>
                                         <p className="font-bold text-xl">Shakil</p>
@@ -62,9 +64,10 @@ const Balance = () => {
             <div className="p-4">
                 <h1 className="text-2xl sm:hidden font-semibold mb-4">Balance</h1>
                 
-                        {/* ---------Balance content */}
-                    <div className="grid sm:grid-cols-12 grid-cols-1 gap-4">
-                    <div className="grid sm:grid-flow-row col-span-4 gap-4 sm:gap-2">
+                    {/* ---------Balance content */}
+                <div className="grid sm:grid-cols-12 grid-cols-1 gap-4">
+                     
+                     <div className="grid sm:grid-flow-row col-span-4 gap-4 sm:gap-2">
                         {/* Card section 1--------------------- */}
                             <div className="rounded-lg border p-4 shadow-md">
                                     <div className="flex justify-between items-center">
@@ -81,7 +84,7 @@ const Balance = () => {
                                         </div>
                                     </div>
                             
-                        </div>
+                            </div>
                         {/* Card section 2--------------------- */}
                             <div className="border rounded-lg p-4 shadow-md">
                                         <div className="flex justify-between items-center">
@@ -98,71 +101,72 @@ const Balance = () => {
                                                     </div>
                                                 </div>
                             </div>
-                        </div>
-                        {/* Card section 3--------------------- */}
-                        <div className="border rounded-lg p-3 col-span-4 shadow-md">
-                                    <div className="flex justify-between items-center">
-                                            <h1 className="text-xl font-semibold">Commission Earned</h1>
-                                     </div>
-                                    <div className="flex justify-between">
-                                        <h1 className="text-4xl font-bold">TK. 300</h1>
-                                        <Select>
-                                            <SelectTrigger className="w-[100px] sm:w-[150px]">
-                                                <SelectValue placeholder="Last 7 payment" />
-                                            </SelectTrigger>
-                                            <SelectContent>
-                                                <SelectGroup>
-                                                <SelectLabel>Months</SelectLabel>
-                                                <SelectItem value="apple">Jan - April</SelectItem>
-                                                <SelectItem value="pineapple">May- Aug</SelectItem>
-                                                <SelectItem value="mango">Sep - Dec</SelectItem>
-                                                </SelectGroup>
-                                            </SelectContent>
-                                        </Select>
+                    </div>
+                
+                    {/* Card section 3--------------------- */}
+                    <div className="border rounded-lg p-3 col-span-4 shadow-md">
+                                <div className="flex justify-between items-center">
+                                        <h1 className="text-xl font-semibold">Commission Earned</h1>
                                     </div>
-                                    <div className="flex items-center gap-2">
-                                        <div className="bg-[#00E676] bg-opacity-20 size-5 rounded-full flex items-center justify-center">
-                                        <ArrowUp className=" text-[#00E676] size-4"></ArrowUp> 
-                                        </div> 
-                                        <div>
-                                            <p><span className="text-[#00E676] text-sm">+50%</span> <span className="text-[#949494]">From last week</span></p>
-                                        </div>
+                                <div className="flex justify-between">
+                                    <h1 className="text-4xl font-bold">TK. 300</h1>
+                                    <Select>
+                                        <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                            <SelectValue placeholder="Last 7 payment" />
+                                        </SelectTrigger>
+                                        <SelectContent>
+                                            <SelectGroup>
+                                            <SelectLabel>Months</SelectLabel>
+                                            <SelectItem value="apple">Jan - April</SelectItem>
+                                            <SelectItem value="pineapple">May- Aug</SelectItem>
+                                            <SelectItem value="mango">Sep - Dec</SelectItem>
+                                            </SelectGroup>
+                                        </SelectContent>
+                                    </Select>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <div className="bg-[#00E676] bg-opacity-20 size-5 rounded-full flex items-center justify-center">
+                                    <ArrowUp className=" text-[#00E676] size-4"></ArrowUp> 
+                                    </div> 
+                                    <div>
+                                        <p><span className="text-[#00E676] text-sm">+50%</span> <span className="text-[#949494]">From last week</span></p>
                                     </div>
-                            {/* Graph chart ---------------------- */}
-                            <ResponsiveContainer width="100%" height="70%">
-                                        <BarChart width={150} height={40} data={data}>
-                                            <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
-                                            <YAxis dataKey='uv'/>
-                                            <Tooltip dataKey='pv' />
-                                            <Legend />
-                                            <CartesianGrid strokeDasharray="3 3" />
-                                            <Bar dataKey="uv"  barSize={20} fill="#6366F1" background={{ fill: '#eee' }} />
-                                        </BarChart>
-                                    </ResponsiveContainer>
+                                </div>
+                        {/* Graph chart ---------------------- */}
+                        <ResponsiveContainer width="100%" height="70%">
+                                    <BarChart width={150} height={40} data={data}>
+                                        <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
+                                        <YAxis dataKey='uv'/>
+                                        <Tooltip dataKey='pv' />
+                                        <Legend />
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <Bar dataKey="uv"  barSize={20} fill="#6366F1" background={{ fill: '#eee' }} />
+                                    </BarChart>
+                                </ResponsiveContainer>
                     </div>
                     {/* Card Section 4 ----------Graph chart 2*/}
                     <div className="border rounded-lg p-3 col-span-4 shadow-md">
-                        
-                                <ResponsiveContainer width="100%" height="100%">
-                                        <BarChart width={150} height={40} data={data}>
-                                            <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
-                                            <YAxis dataKey='uv'/>
-                                            <Tooltip dataKey='pv' />
-                                            <Legend />
-                                            <CartesianGrid strokeDasharray="3 3" />
-                                            <Bar dataKey="uv"  barSize={20} fill="#F163DA" background={{ fill: '#eee' }} />
-                                        </BarChart>
-                                    </ResponsiveContainer>
-                                   
-                        </div>
-                        
+                    
+                            <ResponsiveContainer width="100%" height="100%">
+                                    <BarChart width={150} height={40} data={data}>
+                                        <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
+                                        <YAxis dataKey='uv'/>
+                                        <Tooltip dataKey='pv' />
+                                        <Legend />
+                                        <CartesianGrid strokeDasharray="3 3" />
+                                        <Bar dataKey="uv"  barSize={20} fill="#F163DA" background={{ fill: '#eee' }} />
+                                    </BarChart>
+                                </ResponsiveContainer>
+                                
+                    </div>
+                    
+                </div>
                 {/* Payment Request table----------------- */}
-            </div>
                 <div className="border mt-4 p-2 rounded-lg shadow-md">
                 <h1 className="text-2xl font-semibold mb-4 sm:text-center mt-4">Payment Request</h1>
 
-                    <BalanceTable></BalanceTable>
-                   
+                <BalanceTable></BalanceTable>
+                
                 </div>
                
             </div>
