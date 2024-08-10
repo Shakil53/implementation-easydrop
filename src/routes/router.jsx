@@ -1,6 +1,6 @@
 import App from "@/App";
+import Analytics from "@/pages/UserDashboard/Analytics";
 import Balance from "@/pages/UserDashboard/Balance";
-import BoostRequest from "@/pages/UserDashboard/BoostRequest";
 import Home from "@/pages/UserDashboard/Home";
 import Orders from "@/pages/UserDashboard/Orders";
 import ResellerReferrals from "@/pages/UserDashboard/ResellerReferrals";
@@ -47,8 +47,8 @@ export const router = createBrowserRouter([
                 element: <Balance></Balance>
             },
             {
-                path: 'boost-request',
-                element: <BoostRequest></BoostRequest>
+                path: 'analytics',
+                element: <Analytics></Analytics>
             },
             {
                 path: 'settings',

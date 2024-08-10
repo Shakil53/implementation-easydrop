@@ -1,13 +1,9 @@
 import { cn } from '@/lib/utils';
 import { Link, NavLink } from 'react-router-dom';
-import { HiGift } from "react-icons/hi2";
-import { FaHome, FaStore } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { TbCoinTaka } from "react-icons/tb";
-import { IoMdSettings } from "react-icons/io";
-import { IoMdCart } from "react-icons/io";
 import companyLogo from '../assets/logo/logo.png';
 import { MdQuestionMark } from "react-icons/md";
-import { Rocket } from 'lucide-react';
 import { HiMenu,HiX  } from 'react-icons/hi'
 import { useState } from 'react';
 import { IoMdAnalytics } from "react-icons/io";
@@ -24,12 +20,9 @@ const Sidebar = () => {
 
     const navItems = [
         { to: '/user-dashboard/home', icon: FaHome, label: 'Home' },
-        { to: '/user-dashboard/store', icon: FaStore, label: 'Store' },
-        { to: '/user-dashboard/orders', icon: IoMdCart, label: 'Orders' },
-        { to: '/user-dashboard/reseller-referrals', icon: HiGift, label: 'Reseller Referrals' },
         { to: '/user-dashboard/balance', icon: TbCoinTaka, label: 'Balance' },
-        { to: '/user-dashboard/boost-request', icon: IoMdAnalytics, label: 'Analytics' },
-        { to: '/user-dashboard/settings', icon: IoMdSettings, label: 'Settings' },
+        { to: '/user-dashboard/analytics', icon: IoMdAnalytics, label: 'Analytics' },
+      
         
     ];
 
