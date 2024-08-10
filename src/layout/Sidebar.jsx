@@ -10,6 +10,7 @@ import { MdQuestionMark } from "react-icons/md";
 import { Rocket } from 'lucide-react';
 import { HiMenu,HiX  } from 'react-icons/hi'
 import { useState } from 'react';
+import { IoMdAnalytics } from "react-icons/io";
 
 const Sidebar = () => {
 
@@ -27,8 +28,9 @@ const Sidebar = () => {
         { to: '/user-dashboard/orders', icon: IoMdCart, label: 'Orders' },
         { to: '/user-dashboard/reseller-referrals', icon: HiGift, label: 'Reseller Referrals' },
         { to: '/user-dashboard/balance', icon: TbCoinTaka, label: 'Balance' },
-        { to: '/user-dashboard/boost-request', icon: Rocket, label: 'Boost Request' },
+        { to: '/user-dashboard/boost-request', icon: IoMdAnalytics, label: 'Analytics' },
         { to: '/user-dashboard/settings', icon: IoMdSettings, label: 'Settings' },
+        
     ];
 
 
@@ -47,7 +49,7 @@ const Sidebar = () => {
                             <div className='mb-10 hidden md:block'>
                                 <Link to='/'><img src={companyLogo} alt='company logo'></img></Link>
                             </div>
-                            <nav className="flex flex-col gap-2">
+                    <nav className="flex flex-col gap-2">
                                 {navItems.map(({ to, icon: Icon, label }) => (
                                     <NavLink
                                         key={to}
@@ -63,7 +65,7 @@ const Sidebar = () => {
                                         </div>
                                     </NavLink>
                                 ))}
-                </nav>
+                    </nav>
                     {/* Footer section-------------- */}
                     <div className="hidden md:block bg-[#EBEEFF] max-w-lg p-8 shadow-md rounded-lg mt-12 relative">
                         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#4338CA] rounded-full">
