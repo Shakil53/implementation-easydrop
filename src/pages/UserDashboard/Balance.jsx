@@ -5,7 +5,7 @@ import { ArrowUp } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { TbCoinTaka } from "react-icons/tb";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { data } from "@/api/balanceDataApi";
 import BalanceTable from "@/utils/BalanceTable";
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
@@ -138,7 +138,6 @@ const Balance = () => {
                                         <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
                                         <YAxis dataKey='uv'/>
                                         <Tooltip dataKey='pv' />
-                                        <Legend />
                                         <CartesianGrid strokeDasharray="3 3" />
                                         <Bar dataKey="uv"  barSize={20} fill="#6366F1" background={{ fill: '#eee' }} />
                                     </BarChart>
@@ -179,7 +178,6 @@ const Balance = () => {
                                 <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
                                 <YAxis dataKey='uv'/>
                                 <Tooltip dataKey='pv' />
-                                <Legend />
                                 <CartesianGrid strokeDasharray="3 3" />
                                 <Bar dataKey="uv"  barSize={20} fill="#F163DA" background={{ fill: '#eee' }} />
                             </BarChart>

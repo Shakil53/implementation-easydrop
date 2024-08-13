@@ -6,9 +6,12 @@ import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, Me
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoNotifications } from "react-icons/io5";
-import { Area, AreaChart, CartesianGrid, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { MoveUpRight } from 'lucide-react';
 import { dataForInvestorIncomeGrowth } from "@/api/investorIncomeGrowth";
+import { dataForSalesByCategory } from "@/api/salesByCategory";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -268,12 +271,49 @@ const Analytics = () => {
                         </Select>
 
                     </div>
+                        <div className="justify-center items-center p-6 mt-6 ml-2">
+                            <p>Revenue <span className="ml-20">Tk. 15,000</span></p>
+                            <p>Initial Investment <span className="ml-5">Tk. 10,000</span></p>
+                            <div className="w-auto h-px bg-gray-300 my-2"></div>
+                            <p>Gross profit<span className="ml-16">Tk. 5,000</span></p>
+                        </div>
                 </div>
-                <div className="bg-amber-700 min-h-[100px]"></div>
-                <div className="bg-gray-400 min-h-[100px]"></div>
-                <div className="bg-purple-500 min-h-[100px]"></div>
-                <div className="bg-sky-500 min-h-[100px]"></div>
-                
+                 {/* Content------------6 */}
+                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                     {/* heading--- */}
+                     <div className="flex justify-between mb-2">
+                        <h1 className="font-medium text-2xl">Sales By Category</h1>
+                        <Select>
+                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                <SelectValue placeholder="This month" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                <SelectLabel>Months</SelectLabel>
+                                <SelectItem value="apple">Jan - April</SelectItem>
+                                <SelectItem value="pineapple">May- Aug</SelectItem>
+                                <SelectItem value="mango">Sep - Dec</SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                      </div>
+                      <ResponsiveContainer width="100%" height="70%">
+                        <BarChart width={150} height={40} data={dataForSalesByCategory}>
+                            <XAxis dataKey="name" scale="point"  padding={{ left: 18, right: 20}} />
+                            <YAxis dataKey='uv'/>
+                            <Tooltip dataKey='pv' />
+                           <CartesianGrid strokeDasharray="3 3" />
+                            <Bar dataKey="uv" barSize={20} fill="#D31A65" background={{ fill: '#eee' }}>
+                            </Bar>
+                        </BarChart>
+                    </ResponsiveContainer>
+                       <Link to='/'> <button className="text-xs px-2.5 py-1 shadow-2xl text-white rounded-xl bg-[#522F8F]">View More</button></Link>
+                   
+                </div>
+                    <div className="bg-gray-400 min-h-[100px]"></div>
+                    <div className="bg-purple-500 min-h-[100px]"></div>
+                    <div className="bg-sky-500 min-h-[100px]"></div>
+                    
         </div>
         </>
         
