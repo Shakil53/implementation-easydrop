@@ -14,7 +14,7 @@ export const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadi
     const y = cy + radius * Math.sin(-midAngle * RADIAN);
 };
 
-
+    
 export const style = {
     top: '90%',
     right: 0,

@@ -22,7 +22,7 @@ const Sidebar = () => {
         { to: '/user-dashboard/home', icon: FaHome, label: 'Home' },
         { to: '/user-dashboard/balance', icon: TbCoinTaka, label: 'Balance' },
         { to: '/user-dashboard/analytics', icon: IoMdAnalytics, label: 'Analytics' },
-      
+        { to: '/user-dashboard/pricing', icon: IoMdAnalytics, label: 'Pricing' },
         
     ];
 
