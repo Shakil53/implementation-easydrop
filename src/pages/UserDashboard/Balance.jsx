@@ -61,7 +61,7 @@ const Balance = () => {
                     </div>
                 </div>
             </div>
-            <div className="p-4">
+            <div className="p-3">
                 <h1 className="text-2xl sm:hidden font-semibold mb-4">Balance</h1>
                 
                     {/* ---------Balance content */}

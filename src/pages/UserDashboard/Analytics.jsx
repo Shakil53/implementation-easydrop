@@ -1,31 +1,19 @@
-import { data } from "@/api/analyticsData";
+import { data } from "@/api/marketOverview";
+import { COLORSForOverAllRating, dataForOverAllRating } from "@/api/overallRating";
 import { COLORS, dataForRevenue, renderCustomizedLabel, style } from "@/api/revenueData";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoNotifications } from "react-icons/io5";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Area, AreaChart, CartesianGrid, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-
+import { MoveUpRight } from 'lucide-react';
+import { dataForInvestorIncomeGrowth } from "@/api/investorIncomeGrowth";
 
 
 
 const Analytics = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState(null);
-    
-    const optionsYear = ['2024', '2023', '2022', '2021', '2020'].map(year => ({ value: year, label: year }));
-    
-    const toggleDropdown = () => setIsOpen(!isOpen);
-    const handleSelect = (option) => {
-      setSelectedOption(option);
-      setIsOpen(false);
-    };
-  
-
-
+   
     return (
         <>
         {/* Header Section------------- */}
@@ -70,31 +58,27 @@ const Analytics = () => {
                 </div>
        
         {/* Main Content Section-------- */}
-            <div className="p-4 grid sm:grid-cols-12 gap-4">
+            <div className="p-3 grid sm:grid-cols-12 gap-4">
                {/* Content------------1 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between">
                         <h1 className="font-medium text-2xl">Market Overview</h1>
-                        <div className="relative inline-block w-16">
-                            <div className="bg-white border border-gray-300 rounded-md shadow-sm p-2 flex justify-between items-center cursor-pointer"
-                                onClick={toggleDropdown}
-                            ><span>{selectedOption ? selectedOption.label : 'Year'}</span>
-                            <MdOutlineKeyboardArrowDown className={` transform transition-transform ${isOpen ? 'rotate-180' : ''}`}></MdOutlineKeyboardArrowDown>
-                            </div>
-                            {isOpen && (
-                                <ul className="absolute mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
-                                {optionsYear.map((option) => (
-                                    <li
-                                    key={option.value}
-                                    className="p-2 hover:bg-gray-100 cursor-pointer"
-                                    onClick={() => handleSelect(option)}
-                                    >{option.label}
-                                    </li>
+                        <Select>
+                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                <SelectValue placeholder="Year" />
+                            </SelectTrigger>
+                            <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Years</SelectLabel>
+                                {[2024, 2023, 2022, 2021, 2020].map((year) => (
+                                    <SelectItem key={year} value={year.toString()}>
+                                        {year}
+                                    </SelectItem>
                                 ))}
-                                </ul>
-                            )}
-                        </div>
+                            </SelectGroup>
+                        </SelectContent>
+                        </Select>
 
                     </div>
                         {/* Graph chart ---------------------- */}
@@ -164,9 +148,127 @@ const Analytics = () => {
 
                     
                 </div>
-                <div className="bg-blue-500 sm:col-span-4 min-h-[185px]"></div>
-                <div className="bg-orange-500 sm:col-span-4 min-h-24"></div>
-                <div className="bg-teal-500 min-h-[100px]"></div>
+                {/* Content------------3 */}
+                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                     {/* heading--- */}
+                     <div className="flex justify-between">
+                        <h1 className="font-medium text-2xl">Overall Rating</h1>
+                        <Select>
+                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                <SelectValue placeholder="Year" />
+                            </SelectTrigger>
+                            <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Years</SelectLabel>
+                                {[2024, 2023, 2022, 2021, 2020].map((year) => (
+                                    <SelectItem key={year} value={year.toString()}>
+                                        {year}
+                                    </SelectItem>
+                                ))}
+                            </SelectGroup>
+                        </SelectContent>
+                        </Select>
+                    </div>
+                    <div className="flex justify-evenly items-center">
+                        <PieChart width={130} height={220}>
+                            <Pie
+                            data={dataForOverAllRating}
+                            cx={55}
+                            cy={110}
+                            innerRadius={40}
+                            outerRadius={60}
+                            fill="#8884d8"
+                            paddingAngle={0}
+                            dataKey="value"
+                            >
+                            {data.map((entry, index) => (
+                                <Cell key={`cell-${index}`} fill={COLORSForOverAllRating[index % COLORSForOverAllRating.length]} />
+                            ))}
+                            </Pie>
+                            
+                        </PieChart>
+                        <div>
+                            <p className="text-xs">Overall Rating Performance</p> 
+                            <p className="text-xs font-bold">Very good. Keep it up.</p>
+                            <div className="flex items-center gap-1">
+                                        <div className="bg-[#00E676] bg-opacity-20 size-5 rounded-full flex items-center justify-center">
+                                        <MoveUpRight className=" text-[#00E676] size-3"></MoveUpRight> 
+                                        </div> 
+                                        <div>
+                                            <p><span className="text-[#00E676] text-xs bg-gray-50 rounded-sm">5.48%</span> <span className="text-[#949494] text-xs">From last week</span></p>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                {/* Content------------4 */}
+                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                    {/* heading--- */}
+                    <div className="flex justify-between">
+                        <h1 className="font-medium text-2xl">Investor Income Growth</h1>
+                        <Select>
+                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                <SelectValue placeholder="Year" />
+                            </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Years</SelectLabel>
+                                {[2024, 2023, 2022, 2021, 2020].map((year) => (
+                                    <SelectItem key={year} value={year.toString()}>
+                                        {year}
+                                    </SelectItem>
+                                ))}
+                            </SelectGroup>
+                        </SelectContent>
+                        </Select>
+
+                    </div>
+                        {/* Graph chart ---------------------- */}
+                     <ResponsiveContainer width="100%" height="85%">
+                            <AreaChart width={730} height={250} data={dataForInvestorIncomeGrowth}
+                                margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                                <defs>
+                                    <linearGradient id="colorUv1" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="5%" stopColor="#522F8F" stopOpacity={0.8}/>
+                                        <stop offset="95%" stopColor="#522F8F" stopOpacity={0}/>
+                                    </linearGradient>
+                                    
+                                </defs>
+                                <XAxis dataKey="name" />
+                                <YAxis />
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <Tooltip />
+                                <Area type="monotone" dataKey="uv" stroke="#FF0080" fillOpacity={1} fill="url(#colorUv1)" />
+                            
+                                </AreaChart>
+                                        {/* <Area type="monotone" dataKey="uv" stroke="#FF0080" fill="#522F8F"/> */}
+                        </ResponsiveContainer>
+                    
+                </div>
+                {/* Content------------5 */}
+                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                    {/* heading--- */}
+                    <div className="flex justify-between">
+                        <h1 className="font-medium text-2xl">Investor Gross Profit</h1>
+                        <Select>
+                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                <SelectValue placeholder="Year" />
+                            </SelectTrigger>
+                        <SelectContent>
+                            <SelectGroup>
+                                <SelectLabel>Years</SelectLabel>
+                                {[2024, 2023, 2022, 2021, 2020].map((year) => (
+                                    <SelectItem key={year} value={year.toString()}>
+                                        {year}
+                                    </SelectItem>
+                                ))}
+                            </SelectGroup>
+                        </SelectContent>
+                        </Select>
+
+                    </div>
+                </div>
                 <div className="bg-amber-700 min-h-[100px]"></div>
                 <div className="bg-gray-400 min-h-[100px]"></div>
                 <div className="bg-purple-500 min-h-[100px]"></div>
