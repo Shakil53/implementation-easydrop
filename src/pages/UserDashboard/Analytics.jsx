@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { data } from "@/api/analyticsData";
 import { COLORS, dataForRevenue, renderCustomizedLabel, style } from "@/api/revenueData";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -177,21 +176,6 @@ const Analytics = () => {
         </>
         
     );
-=======
-import Wallet from "../wallet/Wallet";
-import Header from "./Header";
-
-const Analytics = () => {
-  return (
-    <>
-      {/* Header Section------------- */}
-      <Header />
-      {/* -------------Wallet Section------------- */}
-
-      <Wallet />
-    </>
-  );
->>>>>>> 488c34e7de26b9b866c0edc72b0d6194fbfe0134
 };
 
 export default Analytics;
