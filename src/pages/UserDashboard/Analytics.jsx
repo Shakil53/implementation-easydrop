@@ -10,12 +10,19 @@ import { Area, AreaChart, Bar, BarChart, CartesianGrid, Cell, Legend, Pie, PieCh
 import { MoveUpRight } from 'lucide-react';
 import { dataForInvestorIncomeGrowth } from "@/api/investorIncomeGrowth";
 import { dataForSalesByCategory } from "@/api/salesByCategory";
-import { Link } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+
 
 
 
 
 const Analytics = () => {
+    const navigate = useNavigate();
+
+    const goToSalesByCategory = () => {
+        navigate('/user-dashboard/analytics/sales-by-category');
+    };
+
    
     return (
         <>
@@ -65,8 +72,8 @@ const Analytics = () => {
                {/* Content------------1 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
-                    <div className="flex justify-between">
-                        <h1 className="font-medium text-2xl">Market Overview</h1>
+                    <div className="flex justify-between items-center">
+                        <h1 className="font-semibold text-xl">Market Overview</h1>
                         <Select>
                             <SelectTrigger className="w-[100px] sm:w-[150px]">
                                 <SelectValue placeholder="Year" />
@@ -109,8 +116,8 @@ const Analytics = () => {
                 {/* Content------------2 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
-                     <div className="flex justify-between">
-                        <h1 className="font-medium text-2xl">Revenue</h1>
+                     <div className="flex justify-between items-center">
+                        <h1 className="font-semibold text-xl">Revenue</h1>
                         <Select>
                             <SelectTrigger className="w-[100px] sm:w-[150px]">
                                 <SelectValue placeholder="This month" />
@@ -154,8 +161,8 @@ const Analytics = () => {
                 {/* Content------------3 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
-                     <div className="flex justify-between">
-                        <h1 className="font-medium text-2xl">Overall Rating</h1>
+                     <div className="flex justify-between items-center">
+                        <h1 className="font-semibold text-xl">Overall Rating</h1>
                         <Select>
                             <SelectTrigger className="w-[100px] sm:w-[150px]">
                                 <SelectValue placeholder="Year" />
@@ -191,14 +198,14 @@ const Analytics = () => {
                             
                         </PieChart>
                         <div>
-                            <p className="text-xs">Overall Rating Performance</p> 
-                            <p className="text-xs font-bold">Very good. Keep it up.</p>
+                            <p className="text-md">Overall Rating Performance</p> 
+                            <p className="text-md font-bold">Very good. Keep it up.</p>
                             <div className="flex items-center gap-1">
                                         <div className="bg-[#00E676] bg-opacity-20 size-5 rounded-full flex items-center justify-center">
                                         <MoveUpRight className=" text-[#00E676] size-3"></MoveUpRight> 
                                         </div> 
                                         <div>
-                                            <p><span className="text-[#00E676] text-xs bg-gray-50 rounded-sm">5.48%</span> <span className="text-[#949494] text-xs">From last week</span></p>
+                                            <p><span className="text-[#00E676] text-sm bg-gray-50 rounded-sm">5.48%</span> <span className="text-[#949494] text-sm">From last week</span></p>
                                         </div>
                             </div>
                         </div>
@@ -208,8 +215,8 @@ const Analytics = () => {
                 {/* Content------------4 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
-                    <div className="flex justify-between">
-                        <h1 className="font-medium text-2xl">Investor Income Growth</h1>
+                    <div className="flex justify-between items-center">
+                        <h1 className="font-semibold text-md sm:text-xl">Investor Income Growth</h1>
                         <Select>
                             <SelectTrigger className="w-[100px] sm:w-[150px]">
                                 <SelectValue placeholder="Year" />
@@ -252,8 +259,8 @@ const Analytics = () => {
                 {/* Content------------5 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
-                    <div className="flex justify-between">
-                        <h1 className="font-medium text-2xl">Investor Gross Profit</h1>
+                    <div className="flex justify-between items-center">
+                        <h1 className="font-semibold text-xl">Investor Gross Profit</h1>
                         <Select>
                             <SelectTrigger className="w-[100px] sm:w-[150px]">
                                 <SelectValue placeholder="Year" />
@@ -281,8 +288,8 @@ const Analytics = () => {
                  {/* Content------------6 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
-                     <div className="flex justify-between mb-2">
-                        <h1 className="font-medium text-2xl">Sales By Category</h1>
+                     <div className="flex justify-between items-center mb-1">
+                        <h1 className="font-semibold text-xl">Sales By Category</h1>
                         <Select>
                             <SelectTrigger className="w-[100px] sm:w-[150px]">
                                 <SelectValue placeholder="This month" />
@@ -307,7 +314,10 @@ const Analytics = () => {
                             </Bar>
                         </BarChart>
                     </ResponsiveContainer>
-                       <Link to='/'> <button className="text-xs px-2.5 py-1 shadow-2xl text-white rounded-xl bg-[#522F8F]">View More</button></Link>
+                    <div className="flex justify-end">
+                        <button onClick={goToSalesByCategory} className="text-xs px-2.5 py-1 shadow-2xl text-white rounded-xl bg-[#522F8F]">View More</button>
+                    </div>
+                    <Outlet />
                    
                 </div>
                     <div className="bg-gray-400 min-h-[100px]"></div>

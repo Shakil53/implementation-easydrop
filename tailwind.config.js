@@ -11,12 +11,7 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    fontSize: {
-      sm: ["16px", "20px"],
-      md: ["26px", "28px"],
-    },
-    fontFamily: {},
-    container: {
+   container: {
       center: true,
       padding: "2rem",
       screens: {
