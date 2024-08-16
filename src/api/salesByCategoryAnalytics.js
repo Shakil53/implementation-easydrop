@@ -47,7 +47,700 @@ export const tableDatasSalesByCategory = [
     },
     {
         invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
         name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'pencil',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Bag',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Watch',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'T-Shirt',
+        quantity: '29',
+        purchse_value: '$500.00',
+        total_value: '$4000.00',
+        sold_value: '$7000.00'
+        
+    },
+    {
+        invoice: '006',
+        name: 'Watch',
         quantity: '29',
         purchse_value: '$500.00',
         total_value: '$4000.00',
@@ -119,7 +812,7 @@ export const tableDatasSalesByCategory = [
     },
     {
         invoice: '006',
-        name: 'T-Shirt',
+        name: 'Watch',
         quantity: '29',
         purchse_value: '$500.00',
         total_value: '$4000.00',
@@ -146,7 +839,7 @@ export const tableDatasSalesByCategory = [
     },
     {
         invoice: '006',
-        name: 'T-Shirt',
+        name: 'Watch',
         quantity: '29',
         purchse_value: '$500.00',
         total_value: '$4000.00',
@@ -155,7 +848,7 @@ export const tableDatasSalesByCategory = [
     },
     {
         invoice: '006',
-        name: 'T-Shirt',
+        name: 'Bag',
         quantity: '29',
         purchse_value: '$500.00',
         total_value: '$4000.00',
@@ -164,7 +857,7 @@ export const tableDatasSalesByCategory = [
     },
     {
         invoice: '006',
-        name: 'T-Shirt',
+        name: 'pencil',
         quantity: '29',
         purchse_value: '$500.00',
         total_value: '$4000.00',
@@ -173,295 +866,7 @@ export const tableDatasSalesByCategory = [
     },
     {
         invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
-        quantity: '29',
-        purchse_value: '$500.00',
-        total_value: '$4000.00',
-        sold_value: '$7000.00'
-        
-    },
-    {
-        invoice: '006',
-        name: 'T-Shirt',
+        name: 'Watch',
         quantity: '29',
         purchse_value: '$500.00',
         total_value: '$4000.00',

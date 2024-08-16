@@ -11,7 +11,8 @@ import { MoveUpRight } from 'lucide-react';
 import { dataForInvestorIncomeGrowth } from "@/api/investorIncomeGrowth";
 import { dataForSalesByCategory } from "@/api/salesByCategory";
 import { Outlet, useNavigate } from "react-router-dom";
-
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import topGainProductImg from '../../assets/images/img.png'
 
 
 
@@ -21,6 +22,9 @@ const Analytics = () => {
 
     const goToSalesByCategory = () => {
         navigate('/user-dashboard/analytics/sales-by-category');
+    };
+    const goToUploadPage = () => {
+        navigate('/user-dashboard/analytics/upload-tax-info');
     };
 
    
@@ -70,7 +74,7 @@ const Analytics = () => {
         {/* Main Content Section-------- */}
             <div className="p-3 grid sm:grid-cols-12 gap-4">
                {/* Content------------1 */}
-                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                <div className="sm:col-span-5 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
                         <h1 className="font-semibold text-xl">Market Overview</h1>
@@ -114,7 +118,7 @@ const Analytics = () => {
                     
                 </div>
                 {/* Content------------2 */}
-                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                <div className="sm:col-span-3 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center">
                         <h1 className="font-semibold text-xl">Revenue</h1>
@@ -213,7 +217,7 @@ const Analytics = () => {
 
                 </div>
                 {/* Content------------4 */}
-                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                <div className="sm:col-span-5 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
                         <h1 className="font-semibold text-md sm:text-xl">Investor Income Growth</h1>
@@ -257,7 +261,7 @@ const Analytics = () => {
                     
                 </div>
                 {/* Content------------5 */}
-                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                <div className="sm:col-span-3 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
                         <h1 className="font-semibold text-xl">Investor Gross Profit</h1>
@@ -292,7 +296,7 @@ const Analytics = () => {
                         <h1 className="font-semibold text-xl">Sales By Category</h1>
                         <Select>
                             <SelectTrigger className="w-[100px] sm:w-[150px]">
-                                <SelectValue placeholder="This month" />
+                                <SelectValue placeholder="month" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
@@ -320,9 +324,59 @@ const Analytics = () => {
                     <Outlet />
                    
                 </div>
-                    <div className="bg-gray-400 min-h-[100px]"></div>
-                    <div className="bg-purple-500 min-h-[100px]"></div>
-                    <div className="bg-sky-500 min-h-[100px]"></div>
+                {/* Content------------7 */}
+                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                     {/* heading--- */}
+                     <div className="flex justify-between items-center mb-1">
+                        <h1 className="font-semibold text-xl">Top Gainer Product</h1>
+                        <Select>
+                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                <SelectValue placeholder="month" />
+                            </SelectTrigger>
+                            <SelectContent>
+                                <SelectGroup>
+                                <SelectLabel>Months</SelectLabel>
+                                <SelectItem value="apple">Jan - April</SelectItem>
+                                <SelectItem value="pineapple">May- Aug</SelectItem>
+                                <SelectItem value="mango">Sep - Dec</SelectItem>
+                                </SelectGroup>
+                            </SelectContent>
+                        </Select>
+                    </div>
+                    {/* product here----------------- */}
+                    <div>
+                        <Table>
+                            <TableHeader>
+                            <TableRow>
+                                    <TableHead className="text-md">Image</TableHead>
+                                    <TableHead className="text-md">Category</TableHead>
+                                <TableHead className="text-md">Selling amount</TableHead>
+                            </TableRow>
+                            </TableHeader>
+                            <TableBody>
+                                <TableRow>
+                                    <TableCell><img src={topGainProductImg}></img></TableCell>
+                                    <TableCell>Bag TODO</TableCell>
+                                    <TableCell>10,0 TODO</TableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                        <div>
+
+                        </div>
+                    </div>
+                </div>
+                <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
+                
+                    <div className="space-y-8">
+                        <p className="text-center text-lg">Submit your tax Information file here in the box</p>
+                        <div className="flex justify-center">
+                            <button onClick={goToUploadPage} className="text-xs px-2.5 py-1 shadow-2xl text-white rounded-xl bg-[#522F8F]">Upload pdf here</button>
+                        </div>
+
+                    </div>
+                 </div>
+                    
                     
         </div>
         </>
