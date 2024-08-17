@@ -7,6 +7,7 @@ import { MdQuestionMark } from "react-icons/md";
 import { HiMenu,HiX  } from 'react-icons/hi'
 import { useState } from 'react';
 import { IoMdAnalytics } from "react-icons/io";
+import { DollarSign } from 'lucide-react';
 
 const Sidebar = () => {
 
@@ -21,8 +22,8 @@ const Sidebar = () => {
     const navItems = [
         { to: '/user-dashboard/home', icon: FaHome, label: 'Home' },
         { to: '/user-dashboard/balance', icon: TbCoinTaka, label: 'Balance' },
-        { to: '/user-dashboard/analytics', icon: IoMdAnalytics, label: 'Analytics' },
-        { to: '/user-dashboard/pricing', icon: IoMdAnalytics, label: 'Pricing' },
+        { to: '/equitybased-investment/analytics', icon: IoMdAnalytics, label: 'Analytics' },
+        { to: '/equitybased-investment/wallet', icon: DollarSign, label: 'Wallet' },
         
     ];
 

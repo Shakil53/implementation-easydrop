@@ -17,14 +17,14 @@ import topGainProductImg from '../../assets/images/img.png'
 
 
 
-const Analytics = () => {
+const EquityBasedAnalytics = () => {
     const navigate = useNavigate();
 
     const goToSalesByCategory = () => {
-        navigate('/user-dashboard/analytics/sales-by-category');
+        navigate('/equitybased-investment/analytics/sales-by-category');
     };
     const goToUploadPage = () => {
-        navigate('/user-dashboard/analytics/upload-tax-info');
+        navigate('/equitybased-investment/analytics/upload-tax-info');
     };
 
    
@@ -384,4 +384,4 @@ const Analytics = () => {
     );
 };
 
-export default Analytics;
+export default EquityBasedAnalytics;

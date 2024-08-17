@@ -1,19 +1,28 @@
 import App from "@/App";
-import Analytics from "@/pages/UserDashboard/Analytics";
+import EquityBasedInvestment from "@/pages/EquityBasedInvestment/EquityBasedInvestment";
+
 import Balance from "@/pages/UserDashboard/Balance";
 import Home from "@/pages/UserDashboard/Home";
-import Pricing from "@/pages/UserDashboard/Pricing";
-import SalesByCategory from "@/pages/UserDashboard/SalesByCategory";
-import UploadTaxInformation from "@/pages/UserDashboard/UploadTaxInformation";
 import UserDashboard from "@/pages/UserDashboard/UserDashboard";
-import InvestmentListPage from "@/pages/wallet/InvestmentListPage";
+import InvestmentListPage from "@/pages/EquityBasedInvestment/wallet/InvestmentListPage";
 import { createBrowserRouter } from "react-router-dom";
+import EquityBasedAnalytics from "@/pages/EquityBasedInvestment/EquityBasedAnalytics";
+import EquityBasedHome from "@/pages/EquityBasedInvestment/EquityBasedHome";
+import UploadTaxInformation from "@/pages/EquityBasedInvestment/UploadTaxInformation";
+import SalesByCategory from "@/pages/EquityBasedInvestment/SalesByCategory";
+import WalletEquityBasedInvestment from "@/pages/EquityBasedInvestment/WalletEquityBasedInvestment";
+import Pricing from "@/pages/EquityBasedInvestment/wallet/Pricing";
+
+
+
+
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
   },
+   // User dashboard -----------with child
   {
     path: "/user-dashboard",
     element: <UserDashboard></UserDashboard>,
@@ -24,7 +33,7 @@ export const router = createBrowserRouter([
       },
 
       // {
-
+        // bijoy vai- - userdashboad home
       //     path: 'home',
       //     element: <Home></Home>
       // },
@@ -33,9 +42,21 @@ export const router = createBrowserRouter([
         path: "balance",
         element: <Balance></Balance>,
       },
+      
+    ],
+  },
+  // Equity based -----------with child
+  {
+    path: 'equitybased-investment',
+    element: <EquityBasedInvestment></EquityBasedInvestment>,
+    children: [
       {
-        path: "analytics",
-        element: <Analytics></Analytics>,
+        path: 'equitybased-investment/home',
+        element: <EquityBasedHome></EquityBasedHome>
+      },
+      {
+        path: 'analytics',
+        element: <EquityBasedAnalytics></EquityBasedAnalytics>
       },
       {
         path: 'analytics/sales-by-category',
@@ -46,13 +67,18 @@ export const router = createBrowserRouter([
         element: <UploadTaxInformation></UploadTaxInformation>
       },
       {
-        path: "pricing",
-        element: <Pricing />,
+        path: 'wallet',
+        element: <WalletEquityBasedInvestment></WalletEquityBasedInvestment>
       },
       {
-        path: "/user-dashboard/investment_list",
+        path: "investment_list",
         element: <InvestmentListPage />,
       },
-    ],
+      {
+        path: 'pricing',
+        element: <Pricing></Pricing>
+      },
+      
+    ]
   },
 ]);

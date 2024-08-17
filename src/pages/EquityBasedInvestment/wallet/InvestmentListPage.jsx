@@ -1,5 +1,5 @@
 import InvestmentList from "@/components/Wallet/InvestmentList";
-import Header from "../UserDashboard/Header";
+import Header from "../../UserDashboard/Header";
 
 import {
   Pagination,
@@ -14,6 +14,7 @@ import { data } from "@/api/InvestmentListDataApi";
 import InvestmentButton from "@/components/Wallet/InvestmentButton";
 import { FaPlus } from "react-icons/fa";
 import { RiDownload2Fill } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 
 function InvestmentListPage() {
   return (
@@ -31,7 +32,7 @@ function InvestmentListPage() {
           </p>
           <div className="flex flex-wrap gap-1 md:gap-2">
             <InvestmentButton icon={<RiDownload2Fill />} label="Export CSV" />
-            <InvestmentButton icon={<FaPlus />} label="Add Invest" />
+            <NavLink to='/equitybased-investment/pricing'><InvestmentButton icon={<FaPlus />} label="Add Invest" /></NavLink>
           </div>
         </div>
 

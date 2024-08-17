@@ -1,4 +1,4 @@
-import Header from "./Header";
+import Header from "../../UserDashboard/Header";
 import InvestorPlan from "@/components/Wallet/InvestorPlan";
 
 const basicPlan = {
