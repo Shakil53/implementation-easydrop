@@ -4,7 +4,7 @@ import Balance from "@/pages/UserDashboard/Balance";
 import Home from "@/pages/UserDashboard/Home";
 import Pricing from "@/pages/UserDashboard/Pricing";
 import SalesByCategory from "@/pages/UserDashboard/SalesByCategory";
-import UploadTaxInfo from "@/pages/UserDashboard/UploadTaxInfo";
+import UploadTaxInformation from "@/pages/UserDashboard/UploadTaxInformation";
 import UserDashboard from "@/pages/UserDashboard/UserDashboard";
 import InvestmentListPage from "@/pages/wallet/InvestmentListPage";
 import { createBrowserRouter } from "react-router-dom";
@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'analytics/upload-tax-info',
-        element: <UploadTaxInfo></UploadTaxInfo>
+        element: <UploadTaxInformation></UploadTaxInformation>
       },
       {
         path: "pricing",
