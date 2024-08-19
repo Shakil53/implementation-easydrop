@@ -8,7 +8,8 @@ import { HiMenu,HiX  } from 'react-icons/hi'
 import { useState } from 'react';
 import { IoMdAnalytics } from "react-icons/io";
 
-const Sidebar = () => {
+const 
+Sidebar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -22,8 +23,6 @@ const Sidebar = () => {
         { to: '/user-dashboard/home', icon: FaHome, label: 'Home' },
         { to: '/user-dashboard/balance', icon: TbCoinTaka, label: 'Balance' },
         { to: '/user-dashboard/analytics', icon: IoMdAnalytics, label: 'Analytics' },
-      
-        
     ];
 
 
