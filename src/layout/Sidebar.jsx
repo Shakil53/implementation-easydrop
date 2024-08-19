@@ -23,13 +23,9 @@ Sidebar = () => {
     const navItems = [
         { to: '/user-dashboard/home', icon: FaHome, label: 'Home' },
         { to: '/user-dashboard/balance', icon: TbCoinTaka, label: 'Balance' },
-<<<<<<< HEAD
-        { to: '/user-dashboard/analytics', icon: IoMdAnalytics, label: 'Analytics' },
-=======
         { to: '/equitybased-investment/analytics', icon: IoMdAnalytics, label: 'Analytics' },
         { to: '/equitybased-investment/wallet', icon: DollarSign, label: 'Wallet' },
         
->>>>>>> c410f1fc6f5d84ffe0ddbc99ef9c32e5a23e6d7f
     ];
 
 

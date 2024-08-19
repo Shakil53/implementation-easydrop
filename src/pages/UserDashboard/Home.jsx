@@ -1,27 +1,27 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
-import { useState } from "react";
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
+
 import { FaBars, FaBell, FaShoppingCart, FaTimes, FaWallet } from "react-icons/fa";
 import { FaBangladeshiTakaSign, FaHandHoldingDollar } from "react-icons/fa6";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import InfoGraph from "../../components/ui/UserDashboard/InfoGraph";
 import OrderActivity from "../../components/ui/UserDashboard/OrderActivity";
 import useOrder from "@/hook/useOrder";
+import { IoNotifications } from "react-icons/io5";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 
 const Home = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  
   
 const [orders] = useOrder()
 console.log(orders)
 
 
-  const toggleSidebar = () => {
-    setMenuOpen(!menuOpen);
-  };
-
+ 
 
 
   return (
@@ -30,38 +30,44 @@ console.log(orders)
 
     
 
-      <div className='header_section py-8'>
-        <div className="mx-auto flex items-center justify-between px-5 md:px-0">
-          <div className="flex items-center gap-3 md:gap-10 w-1/2">
-            <button className="md:hidden text-xl" onClick={toggleSidebar}>
-              {menuOpen ? <FaTimes /> : <FaBars />}
-            </button>
-            <h2>Welcome, <span className="font-extrabold">Iqra</span></h2>
-            <input
-              type="text"
-              placeholder="Search"
-              className="hidden md:block w-4/6 ps-5 p-2 rounded-full bg-blue-100 text-black focus:outline-none focus:ring-2 focus:ring-gray-500"
-            />
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="bg-blue-100 rounded-full p-1">
-              <FaBell className="text-xl text-blue-700" />
-            </span>
-            <div className="avatar flex items-center rounded-full gap-2">
-              <Avatar className="w-10 h-10">
-                <AvatarImage src="https://github.com/shadcn.png" />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <div className="text-gray-500 text-sm">
-                <p className="font-extrabold">Iqra Khan</p>
-                <p>Id: 45701</p>
-
-              </div>
-              <MdOutlineKeyboardArrowDown className="hidden  sm:block" />
-            </div>
-          </div>
-        </div>
-      </div>
+<div className="flex items-center gap-2 justify-end p-4 lg:p-5">
+                    <div className="flex items-center gap-28 md:gap-5 sm:flex-row-reverse">
+                            <div className="flex gap-3">
+                                <div className="flex sm:flex-row-reverse gap-3 items-center">
+                                    <Avatar>
+                                    <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                                    <AvatarFallback>CN</AvatarFallback>
+                                    </Avatar>
+                                    <div>
+                                        <p className="font-bold text-xl">Shakil</p>
+                                        <p className="text-[#8F8F8F] font-semibold">User Id: TODO</p>
+                                    </div>
+                                </div>    
+                            </div>    
+                            <div className="">
+                                <IoNotifications></IoNotifications>
+                            </div>
+                    </div>
+                    
+                    <div className="hidden sm:block">
+                            <Menubar>
+                                <MenubarMenu>
+                                    <MenubarTrigger><IoIosArrowDown></IoIosArrowDown></MenubarTrigger>
+                                    <MenubarContent className='mt-5'>
+                                    <MenubarItem>
+                                        Settings <MenubarShortcut>⌘T</MenubarShortcut>
+                                    </MenubarItem>
+                                    <MenubarSeparator />
+                                    <MenubarItem>Print</MenubarItem>
+                                    <MenubarSeparator />
+                                    <MenubarItem>Share</MenubarItem>
+                                    <MenubarSeparator />
+                                    <MenubarItem>Logout</MenubarItem>
+                                    </MenubarContent>
+                                </MenubarMenu>
+                            </Menubar>
+                    </div>
+                </div>
 
 
       <div className='upper_part grid md:grid-cols-4 px-2 md:px-0 grid-cols-2 gap-2 md:gap-5 py-10'>
@@ -142,7 +148,7 @@ console.log(orders)
   </div>
 </div>
 
-          <div className='  p-2'>
+          <div className=''>
             {/* {for 2/3 area} */}
             <InfoGraph />
           </div>

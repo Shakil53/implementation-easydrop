@@ -16,7 +16,7 @@ const data = [
 
 const InfoGraph = () => {
   return (
-    <section>
+    <section className='border-2 p-5 rounded-md'>
       <div className='flex items-center justify-between pb-10'>
         <h1 className='text-2xl font-extrabold text-indigo-600'>Overview</h1>
         <Button variant="outline" classname="rounded-none">Income</Button>
