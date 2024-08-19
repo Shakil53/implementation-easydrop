@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
 
-import { FaBars, FaBell, FaShoppingCart, FaTimes, FaWallet } from "react-icons/fa";
+import { FaShoppingCart, FaWallet } from "react-icons/fa";
 import { FaBangladeshiTakaSign, FaHandHoldingDollar } from "react-icons/fa6";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import InfoGraph from "../../components/ui/UserDashboard/InfoGraph";
 import OrderActivity from "../../components/ui/UserDashboard/OrderActivity";
 import useOrder from "@/hook/useOrder";
 import { IoNotifications } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
+import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { data } from "@/api/marketOverview";
 
 
 
@@ -148,10 +148,26 @@ console.log(orders)
   </div>
 </div>
 
-          <div className=''>
-            {/* {for 2/3 area} */}
-            <InfoGraph />
-          </div>
+         {/* Graph chart ---------------------- */}
+         <ResponsiveContainer width="100%" height="85%">
+                            <AreaChart width={730} height={250} data={data}
+                                margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
+                                <defs>
+                                    <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="5%" stopColor="#FF0080" stopOpacity={0.8}/>
+                                    <stop offset="95%" stopColor="#522F8F" stopOpacity={0}/>
+                                    </linearGradient>
+                                    
+                                </defs>
+                                <XAxis dataKey="name" />
+                                <YAxis />
+                                <CartesianGrid strokeDasharray="3 3" />
+                                <Tooltip />
+                                <Area type="monotone" dataKey="uv" stroke="#FF0080" fillOpacity={1} fill="url(#colorUv)" />
+                            
+                                </AreaChart>
+                                        {/* <Area type="monotone" dataKey="uv" stroke="#FF0080" fill="#522F8F"/> */}
+                        </ResponsiveContainer>
 
 
           <div className=' mt-5'>
