@@ -60,7 +60,7 @@ const BalanceTable = () => {
                 <TableCell className="">${totalAmount}</TableCell>
             </TableRow>
         </TableFooter>
-    </Table>
+        </Table>
     );
 };
 

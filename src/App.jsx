@@ -1,4 +1,5 @@
 import UserDashboard from "./pages/UserDashboard/UserDashboard"
+import EquityBasedInvestment from "./pages/EquityBasedInvestment/EquityBasedInvestment"
 
 
 
@@ -7,7 +8,9 @@ function App() {
 
   return (
     <>
-       <UserDashboard></UserDashboard>
+      <UserDashboard></UserDashboard>
+      <EquityBasedInvestment></EquityBasedInvestment>
+       
     </>
   )
 }

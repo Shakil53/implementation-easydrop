@@ -1,59 +1,84 @@
 import App from "@/App";
-import Analytics from "@/pages/UserDashboard/Analytics";
+import EquityBasedInvestment from "@/pages/EquityBasedInvestment/EquityBasedInvestment";
+
 import Balance from "@/pages/UserDashboard/Balance";
 import Home from "@/pages/UserDashboard/Home";
-import Orders from "@/pages/UserDashboard/Orders";
-import ResellerReferrals from "@/pages/UserDashboard/ResellerReferrals";
-import Settings from "@/pages/UserDashboard/Settings";
-import Store from "@/pages/UserDashboard/Store";
 import UserDashboard from "@/pages/UserDashboard/UserDashboard";
+import InvestmentListPage from "@/pages/EquityBasedInvestment/wallet/InvestmentListPage";
+import { createBrowserRouter } from "react-router-dom";
+import EquityBasedAnalytics from "@/pages/EquityBasedInvestment/EquityBasedAnalytics";
+import EquityBasedHome from "@/pages/EquityBasedInvestment/EquityBasedHome";
+import UploadTaxInformation from "@/pages/EquityBasedInvestment/UploadTaxInformation";
+import SalesByCategory from "@/pages/EquityBasedInvestment/SalesByCategory";
+import WalletEquityBasedInvestment from "@/pages/EquityBasedInvestment/WalletEquityBasedInvestment";
+import Pricing from "@/pages/EquityBasedInvestment/wallet/Pricing";
 
-import {  createBrowserRouter } from "react-router-dom";
+
+
 
 
 export const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App></App>
-    },
-    {   
-        path: '/user-dashboard',
-        element: <UserDashboard></UserDashboard>,
-        children: [
-                {
-                    path: '/user-dashboard/home',
-                    element: <Home></Home>      
-                },
-           
-            // {
-               
-            //     path: 'home',
-            //     element: <Home></Home>
-            // },
-            {
-                path: 'store',
-                element: <Store></Store>
-            },
-            {
-                path: 'orders',
-                element: <Orders></Orders>
-            },
-            {
-                path: 'reseller-referrals',
-                element: <ResellerReferrals></ResellerReferrals>
-            },
-            {
-                path: 'balance',
-                element: <Balance></Balance>
-            },
-            {
-                path: 'analytics',
-                element: <Analytics></Analytics>
-            },
-            {
-                path: 'settings',
-                element: <Settings></Settings>
-            }
-        ]
-    }
-])
+  {
+    path: "/",
+    element: <App></App>,
+  },
+   // User dashboard -----------with child
+  {
+    path: "/user-dashboard",
+    element: <UserDashboard></UserDashboard>,
+    children: [
+      {
+        path: "/user-dashboard/home",
+        element: <Home></Home>,
+      },
+
+      // {
+        // bijoy vai- - userdashboad home
+      //     path: 'home',
+      //     element: <Home></Home>
+      // },
+      
+      {
+        path: "balance",
+        element: <Balance></Balance>,
+      },
+      
+    ],
+  },
+  // Equity based -----------with child
+  {
+    path: 'equitybased-investment',
+    element: <EquityBasedInvestment></EquityBasedInvestment>,
+    children: [
+      {
+        path: 'equitybased-investment/home',
+        element: <EquityBasedHome></EquityBasedHome>
+      },
+      {
+        path: 'analytics',
+        element: <EquityBasedAnalytics></EquityBasedAnalytics>
+      },
+      {
+        path: 'analytics/sales-by-category',
+        element: <SalesByCategory></SalesByCategory>
+      },
+      {
+        path: 'analytics/upload-tax-info',
+        element: <UploadTaxInformation></UploadTaxInformation>
+      },
+      {
+        path: 'wallet',
+        element: <WalletEquityBasedInvestment></WalletEquityBasedInvestment>
+      },
+      {
+        path: "investment_list",
+        element: <InvestmentListPage />,
+      },
+      {
+        path: 'pricing',
+        element: <Pricing></Pricing>
+      },
+      
+    ]
+  },
+]);

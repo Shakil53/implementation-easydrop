@@ -1,9 +1,10 @@
 import Sidebar from "@/layout/Sidebar";
 import { Outlet } from "react-router-dom";
 
-const UserDashboard = () => {
-  return (
-    <>
+
+const EquityBasedInvestment = () => {
+    return (
+        <>
       {/* Navbar goes here */}
 
       <div className="grid grid-cols-12 h-screen">
@@ -14,7 +15,7 @@ const UserDashboard = () => {
         </div>
       </div>
     </>
-  );
+    );
 };
 
-export default UserDashboard;
+export default EquityBasedInvestment;
