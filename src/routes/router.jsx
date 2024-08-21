@@ -12,6 +12,7 @@ import UploadTaxInformation from "@/pages/EquityBasedInvestment/UploadTaxInforma
 import SalesByCategory from "@/pages/EquityBasedInvestment/SalesByCategory";
 import WalletEquityBasedInvestment from "@/pages/EquityBasedInvestment/WalletEquityBasedInvestment";
 import Pricing from "@/pages/EquityBasedInvestment/wallet/Pricing";
+// import Home2 from "@/pages/UserDashboard/Home2";
 
 
 

@@ -189,7 +189,7 @@ const EquityBasedAnalytics = () => {
                             data={dataForOverAllRating}
                             cx={55}
                             cy={110}
-                            innerRadius={40}
+                            innerRadius={45}
                             outerRadius={60}
                             fill="#8884d8"
                             paddingAngle={0}
@@ -202,14 +202,14 @@ const EquityBasedAnalytics = () => {
                             
                         </PieChart>
                         <div>
-                            <p className="text-md">Overall Rating Performance</p> 
-                            <p className="text-md font-bold">Very good. Keep it up.</p>
+                            <p className="sm:text-lg text-[12px]">Overall Rating Performance</p> 
+                            <p className="sm:text-lg text-[11px] font-bold">Very good. Keep it up.</p>
                             <div className="flex items-center gap-1">
                                         <div className="bg-[#00E676] bg-opacity-20 size-5 rounded-full flex items-center justify-center">
-                                        <MoveUpRight className=" text-[#00E676] size-3"></MoveUpRight> 
+                                        <MoveUpRight className=" text-[#00E676] sm:size-3 size-2"></MoveUpRight> 
                                         </div> 
                                         <div>
-                                            <p><span className="text-[#00E676] text-sm bg-gray-50 rounded-sm">5.48%</span> <span className="text-[#949494] text-sm">From last week</span></p>
+                                            <p><span className="text-[#00E676] sm:text-sm text-[12px] bg-gray-50 rounded-sm">5.48%</span> <span className="text-[#949494] sm:text-sm text-[12px]">From last week</span></p>
                                         </div>
                             </div>
                         </div>
