@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const OrderActivity = () => {
   return (
     <section className="mt-5">
-      <Tabs defaultValue="account" className="w-[400px]">
+      <Tabs defaultValue="account" className="md:w-[400px]">
         <TabsList>
           <TabsTrigger value="pending">Pending</TabsTrigger>
           <TabsTrigger value="active">Active</TabsTrigger>
