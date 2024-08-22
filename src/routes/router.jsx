@@ -32,13 +32,6 @@ export const router = createBrowserRouter([
         path: "/user-dashboard/home",
         element: <Home></Home>,
       },
-
-      // {
-        // bijoy vai- - userdashboad home
-      //     path: 'home',
-      //     element: <Home></Home>
-      // },
-      
       {
         path: "balance",
         element: <Balance></Balance>,

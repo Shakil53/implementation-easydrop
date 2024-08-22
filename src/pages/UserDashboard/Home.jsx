@@ -1,8 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
-
 import { FaShoppingCart, FaWallet } from "react-icons/fa";
 import { FaBangladeshiTakaSign, FaHandHoldingDollar } from "react-icons/fa6";
 import OrderActivity from "../../components/ui/UserDashboard/OrderActivity";
