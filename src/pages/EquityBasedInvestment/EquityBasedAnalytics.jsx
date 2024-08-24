@@ -73,7 +73,7 @@ const EquityBasedAnalytics = () => {
        
         {/* Main Content Section-------- */}
             <div className="p-3 grid sm:grid-cols-12 gap-4">
-               {/* Content------------1 */}
+               {/* Market Overview Content------------1 */}
                 <div className="sm:col-span-5 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
@@ -117,7 +117,7 @@ const EquityBasedAnalytics = () => {
                         </ResponsiveContainer>
                     
                 </div>
-                {/* Content------------2 */}
+                {/* Revenue Content------------2 */}
                 <div className="sm:col-span-3 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center">
@@ -162,7 +162,7 @@ const EquityBasedAnalytics = () => {
 
                     
                 </div>
-                {/* Content------------3 */}
+                {/* Overall Rating Content------------3 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center">
@@ -216,7 +216,7 @@ const EquityBasedAnalytics = () => {
                     </div>
 
                 </div>
-                {/* Content------------4 */}
+                {/* Investor Income Growth Content------------4 */}
                 <div className="sm:col-span-5 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
@@ -260,7 +260,7 @@ const EquityBasedAnalytics = () => {
                         </ResponsiveContainer>
                     
                 </div>
-                {/* Content------------5 */}
+                {/* Investor Gross Profit Content------------5 */}
                 <div className="sm:col-span-3 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
@@ -289,7 +289,7 @@ const EquityBasedAnalytics = () => {
                             <p>Gross profit<span className="ml-16">Tk. 5,000</span></p>
                         </div>
                 </div>
-                 {/* Content------------6 */}
+                 {/* Sales By Category Content------------6 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center mb-1">
@@ -324,7 +324,7 @@ const EquityBasedAnalytics = () => {
                     <Outlet />
                    
                 </div>
-                {/* Content------------7 */}
+                {/* Top Gainer Product Content------------7 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center mb-1">
@@ -366,6 +366,7 @@ const EquityBasedAnalytics = () => {
                         </div>
                     </div>
                 </div>
+                {/* Submit your tax Information file here in the box Content------------8 */}
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                 
                     <div className="space-y-8">
