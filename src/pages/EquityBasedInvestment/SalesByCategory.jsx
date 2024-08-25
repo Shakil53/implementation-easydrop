@@ -85,7 +85,7 @@ const SalesByCategory = () => {
 
             {/* Content Section */}
             <div className="p-4 flex justify-between">
-                <h1 className="font-semibold text-xl sm:text-3xl">Sales of Category Items</h1>
+                <h1 className="font-bold sm:font-semibold text-md sm:text-3xl">Sales of Category Items</h1>
                 <div className="flex gap-2 items-center">
                     <Select>
                         <SelectTrigger className="w-[65px] sm:w-[150px]">
@@ -124,12 +124,12 @@ const SalesByCategory = () => {
                     <Table>
                         <TableHeader>
                             <TableRow>
-                                <TableHead className="w-[150px] text-lg">Sl No</TableHead>
-                                <TableHead className="text-lg">Name</TableHead>
-                                <TableHead className="text-lg">Quantity</TableHead>
-                                <TableHead className="text-lg">Purchase Value</TableHead>
-                                <TableHead className="text-lg">Total Value</TableHead>
-                                <TableHead className="text-lg">Sold Value</TableHead>
+                                <TableHead className="w-[150px] text-md sm:text-lg">Sl No</TableHead>
+                                <TableHead className="text-md sm:text-lg">Name</TableHead>
+                                <TableHead className="text-md sm:text-lg">Quantity</TableHead>
+                                <TableHead className="text-md sm:text-lg">Purchase Value</TableHead>
+                                <TableHead className="text-md sm:text-lg">Total Value</TableHead>
+                                <TableHead className="text-md sm:text-lg">Sold Value</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>

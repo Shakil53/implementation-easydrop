@@ -77,9 +77,9 @@ const EquityBasedAnalytics = () => {
                 <div className="sm:col-span-5 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
-                        <h1 className="font-semibold text-xl">Market Overview</h1>
+                        <h1 className="font-bold sm:font-semibold text-md sm:text-2xl">Market Overview</h1>
                         <Select>
-                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                            <SelectTrigger className="w-[90px] sm:w-[120px]">
                                 <SelectValue placeholder="Year" />
                             </SelectTrigger>
                             <SelectContent>
@@ -121,10 +121,10 @@ const EquityBasedAnalytics = () => {
                 <div className="sm:col-span-3 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center">
-                        <h1 className="font-semibold text-xl">Revenue</h1>
+                        <h1 className="font-bold sm:font-semibold text-md sm:text-2xl">Revenue</h1>
                         <Select>
-                            <SelectTrigger className="w-[100px] sm:w-[150px]">
-                                <SelectValue placeholder="This month" />
+                            <SelectTrigger className="w-[90px] sm:w-[120px]">
+                                <SelectValue placeholder="Month" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
@@ -166,9 +166,9 @@ const EquityBasedAnalytics = () => {
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center">
-                        <h1 className="font-semibold text-xl">Overall Rating</h1>
+                        <h1 className="font-bold sm:font-semibold text-md sm:text-2xl">Overall Rating</h1>
                         <Select>
-                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                            <SelectTrigger className="w-[90px] sm:w-[120px]">
                                 <SelectValue placeholder="Year" />
                             </SelectTrigger>
                             <SelectContent>
@@ -220,9 +220,9 @@ const EquityBasedAnalytics = () => {
                 <div className="sm:col-span-5 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
-                        <h1 className="font-semibold text-md sm:text-xl">Investor Income Growth</h1>
+                        <h1 className="font-bold sm:font-semibold text-md sm:text-2xl">Investor Income Growth</h1>
                         <Select>
-                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                            <SelectTrigger className="w-[90px] sm:w-[120px]">
                                 <SelectValue placeholder="Year" />
                             </SelectTrigger>
                         <SelectContent>
@@ -264,9 +264,9 @@ const EquityBasedAnalytics = () => {
                 <div className="sm:col-span-3 rounded-lg border p-4 shadow-md">
                     {/* heading--- */}
                     <div className="flex justify-between items-center">
-                        <h1 className="font-semibold text-xl">Investor Gross Profit</h1>
+                        <h1 className="font-bold sm:font-semibold text-md sm:text-2xl">Investor Gross Profit</h1>
                         <Select>
-                            <SelectTrigger className="w-[100px] sm:w-[150px]">
+                            <SelectTrigger className="w-[90px] sm:w-[120px]">
                                 <SelectValue placeholder="Year" />
                             </SelectTrigger>
                         <SelectContent>
@@ -293,10 +293,10 @@ const EquityBasedAnalytics = () => {
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center mb-1">
-                        <h1 className="font-semibold text-xl">Sales By Category</h1>
+                        <h1 className="font-bold sm:font-semibold text-md sm:text-2xl">Sales By Category</h1>
                         <Select>
-                            <SelectTrigger className="w-[100px] sm:w-[150px]">
-                                <SelectValue placeholder="month" />
+                            <SelectTrigger className="w-[90px] sm:w-[120px]">
+                                <SelectValue placeholder="Month" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
@@ -328,10 +328,10 @@ const EquityBasedAnalytics = () => {
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                      {/* heading--- */}
                      <div className="flex justify-between items-center mb-1">
-                        <h1 className="font-semibold text-xl">Top Gainer Product</h1>
+                        <h1 className="font-bold sm:font-semibold text-md sm:text-2xl">Top Gainer Product</h1>
                         <Select>
-                            <SelectTrigger className="w-[100px] sm:w-[150px]">
-                                <SelectValue placeholder="month" />
+                            <SelectTrigger className="w-[90px] sm:w-[120px]">
+                                <SelectValue placeholder="Month" />
                             </SelectTrigger>
                             <SelectContent>
                                 <SelectGroup>
@@ -370,7 +370,7 @@ const EquityBasedAnalytics = () => {
                 <div className="sm:col-span-4 rounded-lg border p-4 shadow-md">
                 
                     <div className="space-y-8">
-                        <p className="text-center text-lg">Submit your tax Information file here in the box</p>
+                        <p className="font-bold sm:font-semibold text-md sm:text-2xl text-center text-lg">Submit your tax Information file here in the box</p>
                         <div className="flex justify-center">
                             <button onClick={goToUploadPage} className="text-xs px-2.5 py-1 shadow-2xl text-white rounded-xl bg-[#522F8F]">Upload pdf here</button>
                         </div>

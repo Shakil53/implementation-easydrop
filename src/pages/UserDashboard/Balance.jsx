@@ -72,7 +72,7 @@ const Balance = () => {
                             <div className="rounded-lg border p-4 shadow-md">
                                     <div className="flex justify-between items-center">
                                         <h1 className="text-xl font-semibold">Current Balance</h1>
-                                        <Button className="bg-[#6366F1] rounded-2xl px-3 py-2 text-white">Request Payment</Button>
+                                        <Button className="bg-[#6366F1] rounded-2xl px-2 sm:px-3 py-1 sm:py-2 text-white">Request Payment</Button>
                                     </div>
                                     <h1 className="text-3xl font-bold">TK. 200</h1>
                                     <div className="flex items-center gap-2">
@@ -111,7 +111,7 @@ const Balance = () => {
                                 <div className="flex justify-between">
                                     <h1 className="text-3xl font-bold">TK. 300</h1>
                                     <Select>
-                                        <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                        <SelectTrigger className="w-[90px] sm:w-[150px]">
                                             <SelectValue placeholder="Last 7 payment" />
                                         </SelectTrigger>
                                         <SelectContent>
@@ -151,7 +151,7 @@ const Balance = () => {
                                 <div className="flex justify-between">
                                     <h1 className="text-3xl font-bold">TK. 200</h1>
                                     <Select>
-                                        <SelectTrigger className="w-[100px] sm:w-[150px]">
+                                        <SelectTrigger className="w-[90px] sm:w-[150px]">
                                             <SelectValue placeholder="Last 7 payment" />
                                         </SelectTrigger>
                                         <SelectContent>

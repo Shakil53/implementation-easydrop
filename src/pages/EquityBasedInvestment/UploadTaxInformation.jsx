@@ -59,7 +59,7 @@ const UploadTaxInformation = () => {
   return (
       <div className="p-3 grid sm:grid-cols-12 gap-4">
             <div className="sm:col-span-12 rounded-lg border p-4 shadow-md w-full h-[500px] border-gray-300 mx-auto flex flex-col items-center justify-center text-center">
-              <h1 className="text-4xl font-semibold mb-1">Upload a file</h1>
+              <h1 className="font-bold sm:font-semibold text-md sm:text-3xl mb-1">Upload a file</h1>
               <p className="text-center text-sm font-semibold mb-4">File upload description</p>
         <FileUploader
             multiple={true}
