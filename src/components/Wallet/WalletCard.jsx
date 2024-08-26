@@ -1,5 +1,5 @@
 import { ArrowUp } from "lucide-react";
-import CardButton from "./CardButton";
+import CardButton from "../CardButton";
 
 function WalletCard({ title, amount, analytics, buttonLabel }) {
   return (

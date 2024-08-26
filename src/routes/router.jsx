@@ -1,4 +1,8 @@
 import App from "@/App";
+import LatestInvestmentPage from "@/pages/product/LatestInvestmentPage";
+import LatestOrderPage from "@/pages/product/LatestOrderPage";
+import PopularAssetsPage from "@/pages/product/PopularAssetsPage";
+import ProductHome from "@/pages/product/ProductHome";
 import Analytics from "@/pages/UserDashboard/Analytics";
 import Balance from "@/pages/UserDashboard/Balance";
 import Home from "@/pages/UserDashboard/Home";
@@ -58,6 +62,22 @@ export const router = createBrowserRouter([
       {
         path: "pricing",
         element: <Pricing />,
+      },
+      {
+        path: "/user-dashboard/product/assets",
+        element: <PopularAssetsPage />,
+      },
+      {
+        path: "/user-dashboard/product/investment",
+        element: <LatestInvestmentPage />,
+      },
+      {
+        path: "/user-dashboard/product/order",
+        element: <LatestOrderPage />,
+      },
+      {
+        path: "/user-dashboard/product/home",
+        element: <ProductHome />,
       },
       {
         path: "/user-dashboard/investment_list",
