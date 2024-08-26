@@ -1,26 +1,33 @@
 import App from "@/App";
+import EquityBasedInvestment from "@/pages/EquityBasedInvestment/EquityBasedInvestment";
+
 import LatestInvestmentPage from "@/pages/product/LatestInvestmentPage";
 import LatestOrderPage from "@/pages/product/LatestOrderPage";
 import PopularAssetsPage from "@/pages/product/PopularAssetsPage";
 import ProductHome from "@/pages/product/ProductHome";
-import Analytics from "@/pages/UserDashboard/Analytics";
 import Balance from "@/pages/UserDashboard/Balance";
 import Home from "@/pages/UserDashboard/Home";
-import Orders from "@/pages/UserDashboard/Orders";
-import Pricing from "@/pages/UserDashboard/Pricing";
-import ResellerReferrals from "@/pages/UserDashboard/ResellerReferrals";
-import Settings from "@/pages/UserDashboard/Settings";
-import Store from "@/pages/UserDashboard/Store";
 import UserDashboard from "@/pages/UserDashboard/UserDashboard";
-import InvestmentListPage from "@/pages/wallet/InvestmentListPage";
-
+import InvestmentListPage from "@/pages/EquityBasedInvestment/wallet/InvestmentListPage";
 import { createBrowserRouter } from "react-router-dom";
+import EquityBasedAnalytics from "@/pages/EquityBasedInvestment/EquityBasedAnalytics";
+import EquityBasedHome from "@/pages/EquityBasedInvestment/EquityBasedHome";
+import UploadTaxInformation from "@/pages/EquityBasedInvestment/UploadTaxInformation";
+import SalesByCategory from "@/pages/EquityBasedInvestment/SalesByCategory";
+import WalletEquityBasedInvestment from "@/pages/EquityBasedInvestment/WalletEquityBasedInvestment";
+import Pricing from "@/pages/EquityBasedInvestment/wallet/Pricing";
+// import Home2 from "@/pages/UserDashboard/Home2";
+
+
+
+
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
   },
+   // User dashboard -----------with child
   {
     path: "/user-dashboard",
     element: <UserDashboard></UserDashboard>,
@@ -29,39 +36,41 @@ export const router = createBrowserRouter([
         path: "/user-dashboard/home",
         element: <Home></Home>,
       },
-
-      // {
-
-      //     path: 'home',
-      //     element: <Home></Home>
-      // },
-      {
-        path: "store",
-        element: <Store></Store>,
-      },
-      {
-        path: "orders",
-        element: <Orders></Orders>,
-      },
-      {
-        path: "reseller-referrals",
-        element: <ResellerReferrals></ResellerReferrals>,
-      },
       {
         path: "balance",
         element: <Balance></Balance>,
       },
+      
+    ],
+  },
+  // Equity based -----------with child
+  {
+    path: 'equitybased-investment',
+    element: <EquityBasedInvestment></EquityBasedInvestment>,
+    children: [
       {
-        path: "analytics",
-        element: <Analytics></Analytics>,
+        path: 'equitybased-investment/home',
+        element: <EquityBasedHome></EquityBasedHome>
       },
       {
-        path: "settings",
-        element: <Settings></Settings>,
+        path: 'analytics',
+        element: <EquityBasedAnalytics></EquityBasedAnalytics>
       },
       {
-        path: "pricing",
-        element: <Pricing />,
+        path: 'analytics/sales-by-category',
+        element: <SalesByCategory></SalesByCategory>
+      },
+      {
+        path: 'analytics/upload-tax-info',
+        element: <UploadTaxInformation></UploadTaxInformation>
+      },
+      {
+        path: 'wallet',
+        element: <WalletEquityBasedInvestment></WalletEquityBasedInvestment>
+      },
+      {
+        path: "investment_list",
+        element: <InvestmentListPage />,
       },
       {
         path: "/user-dashboard/product/assets",
@@ -80,9 +89,10 @@ export const router = createBrowserRouter([
         element: <ProductHome />,
       },
       {
-        path: "/user-dashboard/investment_list",
-        element: <InvestmentListPage />,
+        path: 'pricing',
+        element: <Pricing></Pricing>
       },
-    ],
+      
+    ]
   },
 ]);

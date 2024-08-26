@@ -1,5 +1,5 @@
-import Wallet from "./pages/wallet/Wallet"
 import UserDashboard from "./pages/UserDashboard/UserDashboard"
+import EquityBasedInvestment from "./pages/EquityBasedInvestment/EquityBasedInvestment"
 
 
 
@@ -8,8 +8,9 @@ function App() {
 
   return (
     <>
-       <UserDashboard></UserDashboard>
-       <Wallet/>
+      <UserDashboard></UserDashboard>
+      <EquityBasedInvestment></EquityBasedInvestment>
+       
     </>
   )
 }

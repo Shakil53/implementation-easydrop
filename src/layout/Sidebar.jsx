@@ -7,8 +7,10 @@ import { MdQuestionMark } from "react-icons/md";
 import { HiMenu,HiX  } from 'react-icons/hi'
 import { useState } from 'react';
 import { IoMdAnalytics } from "react-icons/io";
+import { DollarSign } from 'lucide-react';
 
-const Sidebar = () => {
+const 
+Sidebar = () => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -24,6 +26,8 @@ const Sidebar = () => {
         { to: '/user-dashboard/analytics', icon: IoMdAnalytics, label: 'Analytics' },
         { to: '/user-dashboard/pricing', icon: IoMdAnalytics, label: 'Pricing' },
         { to: '/user-dashboard/product/home', icon: IoMdAnalytics, label: 'Product' },
+        { to: '/equitybased-investment/analytics', icon: IoMdAnalytics, label: 'Analytics' },
+        { to: '/equitybased-investment/wallet', icon: DollarSign, label: 'Wallet' },
         
     ];
 
@@ -61,13 +65,13 @@ const Sidebar = () => {
             </nav>
         </div>
         {/* Footer section-------------- */}
-        <div className="hidden md:block bg-[#EBEEFF] max-w-lg p-8 shadow-md rounded-lg mt-12 relative">
+        <div className="hidden md:block bg-[#EBEEFF] max-w-lg p-4 shadow-md rounded-lg mt-12 relative">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#4338CA] rounded-full">
-                <span className="text-4xl text-white"><MdQuestionMark /></span>
+                <span className="text-3xl text-white"><MdQuestionMark /></span>
             </div>
-            <h1 className="text-xs font-bold mb-4 text-center">Need Help with Easydrop</h1>
+            <h1 className="text-xs font-bold mb-2 mt-2 text-center">Need Help with Easydrop</h1>
             <div className='flex justify-center'>
-                <button className='rounded-sm bg-[#4338CA] text-white p-2 text-sm font-semibold'><Link to='/'>Go to Help Center</Link></button>
+                <button className='rounded-sm bg-[#4338CA] text-white p-2 text-xs font-semibold'><Link to='/'>Go to Help Center</Link></button>
             </div>
         </div>
     </aside>

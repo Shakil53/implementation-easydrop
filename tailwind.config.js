@@ -11,7 +11,11 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+<<<<<<< HEAD
     container: {
+=======
+   container: {
+>>>>>>> 6b878f4b890945fc934ee339dca209ab8e457825
       center: true,
       padding: "2rem",
       screens: {
