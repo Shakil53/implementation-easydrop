@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <UserDashboard></UserDashboard>
+      {/* <UserDashboard></UserDashboard> */}
       <EquityBasedInvestment></EquityBasedInvestment>
        
     </>
