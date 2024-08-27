@@ -23,7 +23,9 @@ Sidebar = () => {
     const navItems = [
         { to: '/user-dashboard/home', icon: FaHome, label: 'Home' },
         { to: '/user-dashboard/balance', icon: TbCoinTaka, label: 'Balance' },
+        
         { to: '/equitybased-investment/analytics', icon: IoMdAnalytics, label: 'Analytics' },
+        { to: '/equitybased-investment/equity-home', icon: FaHome, label: 'Equity Home' },
         { to: '/equitybased-investment/wallet', icon: DollarSign, label: 'Wallet' },
         
     ];
@@ -68,7 +70,7 @@ Sidebar = () => {
             </div>
             <h1 className="text-xs font-bold mb-2 mt-2 text-center">Need Help with Easydrop</h1>
             <div className='flex justify-center'>
-                <button className='rounded-sm bg-[#4338CA] text-white p-2 text-xs font-semibold'><Link to='/'>Go to Help Center</Link></button>
+                <Link to="/equitybased-investment/helpSupport" className='rounded-sm bg-[#4338CA] text-white p-2 text-xs font-semibold'>Go to Help Center</Link>
             </div>
         </div>
     </aside>
