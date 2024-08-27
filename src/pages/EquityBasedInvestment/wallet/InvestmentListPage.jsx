@@ -1,5 +1,5 @@
 import InvestmentList from "@/components/Wallet/InvestmentList";
-import Header from "../../UserDashboard/Header";
+// import Header from "../../UserDashboard/Header";
 
 import {
   Pagination,
@@ -20,7 +20,7 @@ function InvestmentListPage() {
   return (
     <>
       {/*--------- Header----------  */}
-      <Header />
+      {/* <Header /> */}
 
       {/* -----------Investment Details page ---------- */}
 
@@ -32,7 +32,9 @@ function InvestmentListPage() {
           </p>
           <div className="flex flex-wrap gap-1 md:gap-2">
             <InvestmentButton icon={<RiDownload2Fill />} label="Export CSV" />
-            <NavLink to='/equitybased-investment/pricing'><InvestmentButton icon={<FaPlus />} label="Add Invest" /></NavLink>
+            <NavLink to="/equitybased-investment/pricing">
+              <InvestmentButton icon={<FaPlus />} label="Add Invest" />
+            </NavLink>
           </div>
         </div>
 
