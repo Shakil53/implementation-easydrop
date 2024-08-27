@@ -1,10 +1,7 @@
 import App from "@/App";
 import EquityBasedInvestment from "@/pages/EquityBasedInvestment/EquityBasedInvestment";
 
-import LatestInvestmentPage from "@/pages/product/LatestInvestmentPage";
-import LatestOrderPage from "@/pages/product/LatestOrderPage";
-import PopularAssetsPage from "@/pages/product/PopularAssetsPage";
-import ProductHome from "@/pages/product/ProductHome";
+
 import Balance from "@/pages/UserDashboard/Balance";
 import Home from "@/pages/UserDashboard/Home";
 import UserDashboard from "@/pages/UserDashboard/UserDashboard";
@@ -18,16 +15,12 @@ import WalletEquityBasedInvestment from "@/pages/EquityBasedInvestment/WalletEqu
 import Pricing from "@/pages/EquityBasedInvestment/wallet/Pricing";
 // import Home2 from "@/pages/UserDashboard/Home2";
 
-
-
-
-
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
   },
-   // User dashboard -----------with child
+  // User dashboard -----------with child
   {
     path: "/user-dashboard",
     element: <UserDashboard></UserDashboard>,
@@ -40,59 +33,41 @@ export const router = createBrowserRouter([
         path: "balance",
         element: <Balance></Balance>,
       },
-      
     ],
   },
   // Equity based -----------with child
   {
-    path: 'equitybased-investment',
+    path: "equitybased-investment",
     element: <EquityBasedInvestment></EquityBasedInvestment>,
     children: [
       {
-        path: 'equitybased-investment/home',
-        element: <EquityBasedHome></EquityBasedHome>
+        path: "equitybased-investment/home",
+        element: <EquityBasedHome></EquityBasedHome>,
       },
       {
-        path: 'analytics',
-        element: <EquityBasedAnalytics></EquityBasedAnalytics>
+        path: "analytics",
+        element: <EquityBasedAnalytics></EquityBasedAnalytics>,
       },
       {
-        path: 'analytics/sales-by-category',
-        element: <SalesByCategory></SalesByCategory>
+        path: "analytics/sales-by-category",
+        element: <SalesByCategory></SalesByCategory>,
       },
       {
-        path: 'analytics/upload-tax-info',
-        element: <UploadTaxInformation></UploadTaxInformation>
+        path: "analytics/upload-tax-info",
+        element: <UploadTaxInformation></UploadTaxInformation>,
       },
       {
-        path: 'wallet',
-        element: <WalletEquityBasedInvestment></WalletEquityBasedInvestment>
+        path: "/equitybased-investment/wallet",
+        element: <WalletEquityBasedInvestment></WalletEquityBasedInvestment>,
       },
       {
         path: "investment_list",
         element: <InvestmentListPage />,
       },
       {
-        path: "/user-dashboard/product/assets",
-        element: <PopularAssetsPage />,
-      },
-      {
-        path: "/user-dashboard/product/investment",
-        element: <LatestInvestmentPage />,
-      },
-      {
-        path: "/user-dashboard/product/order",
-        element: <LatestOrderPage />,
-      },
-      {
-        path: "/user-dashboard/product/home",
-        element: <ProductHome />,
-      },
-      {
-        path: 'pricing',
-        element: <Pricing></Pricing>
-      },
-      
-    ]
+        path: "/equitybased-investment/pricing",
+        element: <Pricing></Pricing>,
+      }
+    ],
   },
 ]);
