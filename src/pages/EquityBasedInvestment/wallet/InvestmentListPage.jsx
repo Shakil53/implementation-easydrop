@@ -36,38 +36,7 @@ function InvestmentListPage() {
           </div>
         </div>
 
-        <InvestmentList data={data} />
-
-        {/* InvestMent List Pagination */}
-        <div className="text-right py-8">
-          <Pagination>
-            <PaginationContent className="inline-flex">
-              <PaginationItem className="border-2 rounded-md">
-                <PaginationPrevious href="#" />
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink
-                  href="#"
-                  className="bg-[#64449B] rounded-md text-white hover:bg-[#64449B] hover:text-white"
-                >
-                  1
-                </PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href="#">2</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationLink href="#">3</PaginationLink>
-              </PaginationItem>
-              <PaginationItem>
-                <PaginationEllipsis />
-              </PaginationItem>
-              <PaginationItem className="border-2 rounded-md">
-                <PaginationNext href="#" />
-              </PaginationItem>
-            </PaginationContent>
-          </Pagination>
-        </div>
+        <InvestmentList data={data} details />
       </div>
     </>
   );

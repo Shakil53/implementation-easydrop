@@ -23,10 +23,16 @@ Sidebar = () => {
     const navItems = [
         { to: '/user-dashboard/home', icon: FaHome, label: 'Home' },
         { to: '/user-dashboard/balance', icon: TbCoinTaka, label: 'Balance' },
+<<<<<<< HEAD
         
+=======
+        { to: '/user-dashboard/analytics', icon: IoMdAnalytics, label: 'Analytics' },
+        { to: '/user-dashboard/product/home', icon: IoMdAnalytics, label: 'Product' },
+>>>>>>> 24e5b6753472f6c96d9ebf8d663aa996768d2f9a
         { to: '/equitybased-investment/analytics', icon: IoMdAnalytics, label: 'Analytics' },
         { to: '/equitybased-investment/equity-home', icon: FaHome, label: 'Equity Home' },
         { to: '/equitybased-investment/wallet', icon: DollarSign, label: 'Wallet' },
+        { to: '/equitybased-investment/pricing', icon: IoMdAnalytics, label: 'Pricing' },
         
     ];
 
