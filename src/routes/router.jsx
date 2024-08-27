@@ -37,11 +37,6 @@ export const router = createBrowserRouter([
         path: "balance",
         element: <Balance></Balance>,
       },
-<<<<<<< HEAD
-      
-      
-=======
->>>>>>> 24e5b6753472f6c96d9ebf8d663aa996768d2f9a
     ],
   },
   // Equity based -----------with child
@@ -51,7 +46,6 @@ export const router = createBrowserRouter([
     children: [
      
       {
-<<<<<<< HEAD
           path:'equity-home',
           element: <EquityBasedHome/>
       },
@@ -76,14 +70,6 @@ export const router = createBrowserRouter([
       {
         path: 'analytics',
         element: <EquityBasedAnalytics></EquityBasedAnalytics>
-=======
-        path: "equitybased-investment/home",
-        element: <EquityBasedHome></EquityBasedHome>,
-      },
-      {
-        path: "analytics",
-        element: <EquityBasedAnalytics></EquityBasedAnalytics>,
->>>>>>> 24e5b6753472f6c96d9ebf8d663aa996768d2f9a
       },
       {
         path: "analytics/sales-by-category",
