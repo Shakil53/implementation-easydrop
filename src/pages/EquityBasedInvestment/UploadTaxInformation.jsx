@@ -58,7 +58,7 @@ const AddProduct = () => {
       <>
           <div className="p-3 grid sm:grid-cols-12 gap-4">
             <div className="sm:col-span-12 rounded-lg p-4 shadow-md w-full border-gray-300 mx-auto flex flex-col items-center justify-center text-center">
-                <h1 className="font-bold sm:font-semibold text-md sm:text-3xl mb-1">Add Product</h1>
+                <h1 className="font-bold sm:font-semibold text-md sm:text-3xl mb-1">File Upload</h1>
                 <p className="text-center text-sm font-semibold mb-4">File upload description</p>
                 
                 <div className="flex w-full justify-between items-start">
