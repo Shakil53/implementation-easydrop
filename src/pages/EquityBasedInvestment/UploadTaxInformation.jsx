@@ -70,7 +70,7 @@ const AddProduct = () => {
                     label="Upload or drop files right here"
                     required={true}
                     disabled={false}
-                    classes="w-[60%] flex flex-col items-center justify-center border border-dashed border-[#139FAD]"
+                    classes="w-[60%] flex flex-col items-center justify-center border-2 border-dashed border-[#744692]"
                     types={fileTypes}
                     maxSize={20} // 20MB
                     onTypeError={handleTypeError}
@@ -123,7 +123,7 @@ const AddProduct = () => {
                     </button>
                     <button
                         onClick={handleSubmit}
-                        className="text-sm px-3 py-2 shadow-2xl text-white rounded-lg bg-[#139FAD]"
+                        className="text-sm px-3 py-2 shadow-2xl text-white rounded-lg bg-[#744692]"
                     >
                         Submit
                     </button>
