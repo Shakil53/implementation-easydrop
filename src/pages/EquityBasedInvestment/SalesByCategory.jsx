@@ -1,5 +1,15 @@
 import { useState } from 'react';
 import { tableDatasSalesByCategory } from "@/api/salesByCategoryAnalytics";
+import {
+    Pagination,
+    PaginationContent,
+    PaginationEllipsis,
+    PaginationItem,
+    PaginationLink,
+    PaginationNext,
+    PaginationPrevious,
+  } from "@/components/ui/pagination";
+  
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -7,41 +17,39 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import { IoIosArrowDown } from "react-icons/io";
 import { IoNotifications } from "react-icons/io5";
 
+
+
 const SalesByCategory = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const rowsPerPage = 15;
-    const totalPages = Math.ceil(tableDatasSalesByCategory.length / rowsPerPage);
+    const itemsPerPage = 15;
+    const totalPages = Math.ceil(tableDatasSalesByCategory.length / itemsPerPage);
+    const maxPageNumbersToShow = 3;
 
-    // Get current page data
+    // Get data for the current page
     const currentData = tableDatasSalesByCategory.slice(
-        (currentPage - 1) * rowsPerPage,
-        currentPage * rowsPerPage
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
     );
 
     // Handle page change
-    const handlePageChange = (pageNumber) => {
-        if (pageNumber >= 1 && pageNumber <= totalPages) {
-            setCurrentPage(pageNumber);
-        }
+    const handlePageChange = (page) => {
+        if (page < 1 || page > totalPages) return; // Ensure page number is within bounds
+        setCurrentPage(page);
     };
 
-    // Generate page numbers
-    const pageNumbers = () => {
-        const range = 3;
-        let start = Math.max(currentPage - range, 1);
-        let end = Math.min(currentPage + range, totalPages);
+    // Calculate page numbers to display
+    const pageNumbers = [];
+    const halfMaxPages = Math.floor(maxPageNumbersToShow / 2);
+    let startPage = Math.max(1, currentPage - halfMaxPages);
+    let endPage = Math.min(totalPages, startPage + maxPageNumbersToShow - 1);
 
-        if (end - start < 2 * range) {
-            start = Math.max(end - 2 * range, 1);
-        }
+    if (endPage - startPage < maxPageNumbersToShow - 1) {
+        startPage = Math.max(1, endPage - maxPageNumbersToShow + 1);
+    }
 
-        const pages = [];
-        for (let i = start; i <= end; i++) {
-            pages.push(i);
-        }
-
-        return pages;
-    };
+    for (let i = startPage; i <= endPage; i++) {
+        pageNumbers.push(i);
+    }
 
     return (
         <>
@@ -135,7 +143,7 @@ const SalesByCategory = () => {
                         <TableBody>
                             {currentData.map((data, index) => (
                                 <TableRow key={data.invoice}>
-                                    <TableCell>{(currentPage - 1) * rowsPerPage + index + 1}</TableCell>
+                                   <TableCell>{(currentPage - 1) * itemsPerPage + index + 1}</TableCell>
                                     <TableCell>{data.name}</TableCell>
                                     <TableCell>{data.quantity}</TableCell>
                                     <TableCell>{data.purchse_value}</TableCell>
@@ -146,39 +154,75 @@ const SalesByCategory = () => {
                         </TableBody>
                     </Table>
 
-                    {/* Pagination Section */}
-                    <div className="flex justify-end items-center mt-4">
-                        <button
-                            onClick={() => handlePageChange(currentPage - 1)}
-                            className="px-3 py-1 rounded bg-gray-200 text-gray-700 disabled:opacity-50"
-                            disabled={currentPage === 1}
-                        >
-                            Previous
-                        </button>
+                    {/* *******Pagination*********** */}
+                    <div className="text-right py-4">
+                        <Pagination>
+                            <PaginationContent className="inline-flex">
+                                <PaginationItem className="border-2 rounded-md">
+                                    <PaginationPrevious
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handlePageChange(currentPage - 1);
+                                        }}
+                                    />
+                                </PaginationItem>
 
-                        <div className="flex">
-                            {pageNumbers().map((pageNumber) => (
-                                <button
-                                    key={pageNumber}
-                                    onClick={() => handlePageChange(pageNumber)}
-                                    className={`px-3 py-1 mx-1 rounded ${
-                                        currentPage === pageNumber
-                                            ? 'bg-blue-500 text-white'
-                                            : 'bg-gray-200 text-gray-700'
-                                    }`}
-                                >
-                                    {pageNumber}
-                                </button>
-                            ))}
-                        </div>
+                                {/* Display first page and ellipsis */}
+                                {startPage > 1 && (
+                                    <>
+                                        <PaginationItem>
+                                            <PaginationLink href="#" onClick={() => handlePageChange(1)}>
+                                                1
+                                            </PaginationLink>
+                                        </PaginationItem>
+                                        {startPage > 2 && <PaginationEllipsis />}
+                                    </>
+                                )}
 
-                        <button
-                            onClick={() => handlePageChange(currentPage + 1)}
-                            className="px-3 py-1 rounded bg-gray-200 text-gray-700 disabled:opacity-50"
-                            disabled={currentPage === totalPages}
-                        >
-                            Next
-                        </button>
+                                {/* Display page numbers */}
+                                {pageNumbers.map((page) => (
+                                    <PaginationItem key={page}>
+                                        <PaginationLink
+                                            href="#"
+                                            onClick={() => handlePageChange(page)}
+                                            className={`${
+                                                currentPage === page
+                                                    ? "bg-[#64449B] text-white"
+                                                    : "hover:bg-[#64449B] hover:text-white"
+                                            }`}
+                                        >
+                                            {page}
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                ))}
+
+                                {/* Display ellipsis and last page */}
+                                {endPage < totalPages && (
+                                    <>
+                                        {endPage < totalPages - 1 && <PaginationEllipsis />}
+                                        <PaginationItem>
+                                            <PaginationLink
+                                                href="#"
+                                                onClick={() => handlePageChange(totalPages)}
+                                            >
+                                                {totalPages}
+                                            </PaginationLink>
+                                        </PaginationItem>
+                                    </>
+                                )}
+
+                                <PaginationItem className="border-2 rounded-md">
+                                    <PaginationNext
+                                        href="#"
+                                        onClick={(e) => {
+                                            e.preventDefault();
+                                            handlePageChange(currentPage + 1);
+                                        }}
+                                    />
+                                </PaginationItem>
+                            </PaginationContent>
+                        </Pagination>
                     </div>
                 </div>
             </div>
