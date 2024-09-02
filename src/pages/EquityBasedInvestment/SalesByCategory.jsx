@@ -1,55 +1,32 @@
 import { useState } from 'react';
 import { tableDatasSalesByCategory } from "@/api/salesByCategoryAnalytics";
-import {
-    Pagination,
-    PaginationContent,
-    PaginationEllipsis,
-    PaginationItem,
-    PaginationLink,
-    PaginationNext,
-    PaginationPrevious,
-  } from "@/components/ui/pagination";
-  
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarSeparator, MenubarShortcut, MenubarTrigger } from "@/components/ui/menubar";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoNotifications } from "react-icons/io5";
+import TablePagination from '@/components/ui/TablePagination';
 
 
 
 const SalesByCategory = () => {
+    // pagination-------
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 15;
-    const totalPages = Math.ceil(tableDatasSalesByCategory.length / itemsPerPage);
-    const maxPageNumbersToShow = 3;
+  const itemsPerPage = 8;
+  const totalPages = Math.ceil(tableDatasSalesByCategory.length / itemsPerPage);
 
-    // Get data for the current page
-    const currentData = tableDatasSalesByCategory.slice(
-        (currentPage - 1) * itemsPerPage,
-        currentPage * itemsPerPage
-    );
+  // Get data for the current page
+  const currentData = tableDatasSalesByCategory.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
-    // Handle page change
-    const handlePageChange = (page) => {
-        if (page < 1 || page > totalPages) return; // Ensure page number is within bounds
-        setCurrentPage(page);
+  // Handle page change
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
     };
-
-    // Calculate page numbers to display
-    const pageNumbers = [];
-    const halfMaxPages = Math.floor(maxPageNumbersToShow / 2);
-    let startPage = Math.max(1, currentPage - halfMaxPages);
-    let endPage = Math.min(totalPages, startPage + maxPageNumbersToShow - 1);
-
-    if (endPage - startPage < maxPageNumbersToShow - 1) {
-        startPage = Math.max(1, endPage - maxPageNumbersToShow + 1);
-    }
-
-    for (let i = startPage; i <= endPage; i++) {
-        pageNumbers.push(i);
-    }
+    
 
     return (
         <>
@@ -154,76 +131,15 @@ const SalesByCategory = () => {
                         </TableBody>
                     </Table>
 
-                    {/* *******Pagination*********** */}
-                    <div className="text-right py-4">
-                        <Pagination>
-                            <PaginationContent className="inline-flex">
-                                <PaginationItem className="border-2 rounded-md">
-                                    <PaginationPrevious
-                                        href="#"
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            handlePageChange(currentPage - 1);
-                                        }}
-                                    />
-                                </PaginationItem>
-
-                                {/* Display first page and ellipsis */}
-                                {startPage > 1 && (
-                                    <>
-                                        <PaginationItem>
-                                            <PaginationLink href="#" onClick={() => handlePageChange(1)}>
-                                                1
-                                            </PaginationLink>
-                                        </PaginationItem>
-                                        {startPage > 2 && <PaginationEllipsis />}
-                                    </>
-                                )}
-
-                                {/* Display page numbers */}
-                                {pageNumbers.map((page) => (
-                                    <PaginationItem key={page}>
-                                        <PaginationLink
-                                            href="#"
-                                            onClick={() => handlePageChange(page)}
-                                            className={`${
-                                                currentPage === page
-                                                    ? "bg-[#64449B] text-white"
-                                                    : "hover:bg-[#64449B] hover:text-white"
-                                            }`}
-                                        >
-                                            {page}
-                                        </PaginationLink>
-                                    </PaginationItem>
-                                ))}
-
-                                {/* Display ellipsis and last page */}
-                                {endPage < totalPages && (
-                                    <>
-                                        {endPage < totalPages - 1 && <PaginationEllipsis />}
-                                        <PaginationItem>
-                                            <PaginationLink
-                                                href="#"
-                                                onClick={() => handlePageChange(totalPages)}
-                                            >
-                                                {totalPages}
-                                            </PaginationLink>
-                                        </PaginationItem>
-                                    </>
-                                )}
-
-                                <PaginationItem className="border-2 rounded-md">
-                                    <PaginationNext
-                                        href="#"
-                                        onClick={(e) => {
-                                            e.preventDefault();
-                                            handlePageChange(currentPage + 1);
-                                        }}
-                                    />
-                                </PaginationItem>
-                            </PaginationContent>
-                        </Pagination>
-                    </div>
+                    {/* Pagination Section */}
+                <div className="text-right py-4">
+                    <TablePagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    handlePageChange={handlePageChange}
+                    maxPageNumbersToShow={3}
+                    />
+                </div>
                 </div>
             </div>
         </>
